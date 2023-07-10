@@ -1,0 +1,1644 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Test 04</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-interactiveBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="ba93d094-bf3c-4e52-8db3-3b5c35b3bba4" class="page sans"><header><h1 class="page-title">Test 04</h1><p class="page-description"></p></header><div class="page-body"><h3 id="8279a2e7-dbd7-4718-aea0-9547101ff4d6" class="">Part 1</h3><figure id="a1e2ff7d-6a7d-4655-8b2c-332c566a4fb5" class="image"><a href="https://lh6.googleusercontent.com/Z_WWz0S_AfG7WhogMaV7a_yFUcKdr57fUsKgW44MG0kMAXwz0Axbg9LgKOGofAvHJkKcWQ38Xe9oddk9M_LFIlRjxnxNrqYaVbCEQ3rG-2d4izSs34f94EcFPaxU_Kba0ccYPWkputJTpJ-unL4SgCM"><img style="width:624px" src="https://lh6.googleusercontent.com/Z_WWz0S_AfG7WhogMaV7a_yFUcKdr57fUsKgW44MG0kMAXwz0Axbg9LgKOGofAvHJkKcWQ38Xe9oddk9M_LFIlRjxnxNrqYaVbCEQ3rG-2d4izSs34f94EcFPaxU_Kba0ccYPWkputJTpJ-unL4SgCM"/></a></figure><p id="5e9b123b-69c5-4ed9-af83-bb740c742ab0" class="">
+</p><figure id="503de66e-b587-4c1c-9a5a-2087a6bb5c25"><div class="source"><a href="Test%2004%20ba93d094bf3c4e528db33b5c35b3bba4/part1-1.mp3">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7872ba10-6bb9-45f4-94a9-48cb5fe2b8a8/part1-1.mp3</a></div></figure><p id="48a02970-7e29-4d89-b62c-ca215b96ee44" class="">(A) She&#x27;s wearing headphones.</p><p id="75657219-cece-4bdd-b0a2-ddedad6ba3bc" class="">(B) She&#x27;s opening a drawer.</p><p id="02c424d6-2bcd-4c85-888f-2db6c6e80a9b" class="">(C) She&#x27;s holding a microphone.</p><p id="4efe263f-1e35-47a7-9692-3116901c4adb" class=""><strong>(D) She&#x27;s pushing a button.</strong></p><p id="966fb68d-ad36-406c-af08-f3b48f018be3" class="">
+</p><p id="aef8f653-54cb-4789-99f6-a6db17fe2078" class="">(A) Cô ấy đang đeo tai nghe.</p><p id="b7899a28-52ad-4e7d-a399-3e633e40b62c" class="">(B) Cô ấy đang mở ngăn kéo.</p><p id="de5be0e7-fd57-4540-9089-87ce2b430a4e" class="">(C) Cô ấy đang cầm micro.</p><p id="0d4bab14-d2a7-47be-be80-d311660a2499" class=""><strong>(D) Cô ấy đang bấm nút.</strong></p><figure id="937e05c8-4c0d-4ca1-9a0c-ddf554ceb1d3" class="image"><a href="Test%2004%20ba93d094bf3c4e528db33b5c35b3bba4/Untitled.png"><img style="width:916px" src="Test%2004%20ba93d094bf3c4e528db33b5c35b3bba4/Untitled.png"/></a></figure><figure id="5be37cf4-56d5-4347-9813-4ad956419dcb"><div class="source"><a href="Test%2004%20ba93d094bf3c4e528db33b5c35b3bba4/part1-2.mp3">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0e45918e-56e8-4fc6-b2f0-daa4a91ab496/part1-2.mp3</a></div></figure><p id="f62edf0a-b221-4a5d-91b8-a171f0634e60" class="">
+</p><p id="5611cf33-574e-4b4f-8fed-e6e0a3d39653" class=""><strong>(A) They&#x27;re using laptop computers.</strong>
+(B) They&#x27;re exchanging business cards.
+(C) One of the men is putting on a sweater.
+(D) One of the men is moving a chair.</p><p id="70f7d560-bc25-4ad9-bd3f-288498bd72ce" class="">
+</p><p id="c2f01506-63c7-43e4-97c8-95692117ca50" class="">(A) Họ đang sử dụng máy tính xách tay. 
+(B) Họ đang trao đổi danh thiếp. 
+(C) Một trong những người đàn ông đang mặc áo len. 
+(D) Một trong những người đàn ông đang di chuyển một chiếc ghế.</p><figure id="f63ee85f-7203-493c-aa7c-cb5991fddf32" class="image"><a href="Test%2004%20ba93d094bf3c4e528db33b5c35b3bba4/Untitled%201.png"><img style="width:852px" src="Test%2004%20ba93d094bf3c4e528db33b5c35b3bba4/Untitled%201.png"/></a></figure><figure id="9c884ce3-e2cd-4762-8fc6-a2d5b180cc1b"><div class="source"><a href="Test%2004%20ba93d094bf3c4e528db33b5c35b3bba4/part1-3.mp3">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/47e07e74-be86-451e-a5bf-7009830fd540/part1-3.mp3</a></div></figure><p id="0ac45f34-3e90-4209-9b0b-85a5f8d82935" class="">(A) She&#x27;s pointing toward a building.
+(B) She&#x27;s handing the man an umbrella.
+<strong>(C) They&#x27;re greeting each other.</strong>
+(D) They&#x27;re walking side by side.</p><p id="3845ce1a-cfc8-4e42-acd8-b5d8a72813e9" class="">(A) Cô ấy đang chỉ về phía một tòa nhà. 
+(B) Cô ấy đang đưa cho người đàn ông một chiếc ô. 
+<strong>(C) Họ đang chào nhau. </strong>
+(D) Họ đang đi cạnh nhau.</p><figure id="1b0a96b7-b9b1-47df-9a94-03802d77482c" class="image"><a href="Test%2004%20ba93d094bf3c4e528db33b5c35b3bba4/Untitled%202.png"><img style="width:852px" src="Test%2004%20ba93d094bf3c4e528db33b5c35b3bba4/Untitled%202.png"/></a></figure><figure id="120ced0b-6afe-421a-9f0f-091b4a3967b2"><div class="source"><a href="Test%2004%20ba93d094bf3c4e528db33b5c35b3bba4/part1-4.mp3">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9bd3ab11-0d4f-4e9c-965d-ba45e68f2815/part1-4.mp3</a></div></figure><p id="5518bc9f-e7fe-4212-8a3f-a78a883205a9" class="">(A) A chalkboard is being erased.
+<strong>(B) Some people are attending a presentation.
+</strong>(C) A man is leaning against a doorway.
+(D) All of the seats are occupied.</p><p id="6a747bbc-347f-465b-9c7d-bab117e8d40c" class="">(A) Một bảng phấn đang bị xóa. 
+<strong>(B) Một số người đang tham dự một buổi thuyết trình.
+</strong>(C) Một người đàn ông đang dựa vào ô cửa. 
+(D) Tất cả các ghế đều có người ngồi.</p><figure id="c87bb178-40a5-494f-9ca4-1702ed8ea7e5" class="image"><a href="Test%2004%20ba93d094bf3c4e528db33b5c35b3bba4/Untitled%203.png"><img style="width:852px" src="Test%2004%20ba93d094bf3c4e528db33b5c35b3bba4/Untitled%203.png"/></a></figure><figure id="80720f9a-db12-4df6-aac6-92b601ec4c4f"><div class="source"><a href="Test%2004%20ba93d094bf3c4e528db33b5c35b3bba4/part1-5.mp3">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/aa92dfaf-24c2-4e03-bdf5-e7b5b567c51c/part1-5.mp3</a></div></figure><p id="a4392f0a-0633-46ba-8e1e-036f580bc6c6" class="">(A) Passengers are exiting an airport terminal.
+(B) An aircraft is taking off from a runway.
+(C) Pieces of luggage are lined up on the pavement.
+<strong>(D) A staircase has been positioned next to an airplane.</strong></p><p id="e07e2499-89ba-4483-ba6e-a19d3144a5ae" class="">(A) Hành khách đang rời khỏi nhà ga sân bay. 
+(B) Một chiếc máy bay đang cất cánh từ đường băng. 
+(C) Những kiện hành lý được xếp trên vỉa hè. 
+(D) Một cầu thang đã được đặt bên cạnh một Máy bay.</p><figure id="1296d125-44df-485b-a305-813ea385a2bb" class="image"><a href="Test%2004%20ba93d094bf3c4e528db33b5c35b3bba4/Untitled%204.png"><img style="width:852px" src="Test%2004%20ba93d094bf3c4e528db33b5c35b3bba4/Untitled%204.png"/></a></figure><figure id="2578f314-61ac-40de-a578-07136b6fdc42"><div class="source"><a href="Test%2004%20ba93d094bf3c4e528db33b5c35b3bba4/part1-6.mp3">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4544c01d-1e95-4baa-8980-4aa5cd7618a3/part1-6.mp3</a></div></figure><p id="637d6be4-d58a-4c60-a869-5e7d7d9a8cc7" class="">(A) Fresh vegetables are being chopped on a cutting board.
+(B) Food is being cleared from a counter.
+(C) Bowls have been stacked on a kitchen shelf.
+<strong>(D) Some cookware has been left on a stove.</strong></p><p id="940a28fd-1187-4525-907a-f07cfd11a131" class="">(A) Rau tươi đang được cắt nhỏ trên thớt.
+(B) Thực phẩm đang được dọn khỏi quầy. 
+(C) Bát đã được xếp chồng lên kệ bếp. 
+(D) Một số dụng cụ nấu ăn đã được để lại trên bếp.</p><h3 id="fbcaebcd-7db9-450a-a031-ca88d48600fe" class="">Part 2</h3><p id="60999351-6ec2-4136-8a74-888f3e072750" class="">7.</p><figure id="08fdd6f8-0d25-495f-8f5b-074ca358afeb"><div class="source"><a href="Test%2004%20ba93d094bf3c4e528db33b5c35b3bba4/part2-7.mp3">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c8e495b8-885e-47de-bccc-6fc0c76b7f7e/part2-7.mp3</a></div></figure><div id="e4477e2d-ebe2-4b7b-ae49-8260e9dab759" class="column-list"><div id="5c1c4c98-9643-4548-8d5d-5e94451232f8" style="width:50%" class="column"><p id="33edbfb6-9d8a-4c2f-b685-3554392f1c2b" class="">What time does the movie start tonight?
+(A) We&#x27;re moving on Saturday. </p><p id="8fe3fa09-dd3e-4b70-9921-52ed8d669918" class=""><strong>(B) At seven o&#x27;clock.</strong> </p><p id="429814f4-c51e-40d4-be94-2cc043593262" class="">(C) It was in the theater.</p><p id="930e7c42-5c2e-4899-b6cc-2d703d81a007" class="">
+</p></div><div id="e9987a4a-269f-47c1-ad8a-8ca83c10486e" style="width:50%" class="column"><p id="de2772ad-51f2-4e83-b3cf-698ce0ec37e9" class="">Bộ phim bắt đầu tối nay lúc mấy giờ? 
+(A) Chúng tôi sẽ di chuyển vào thứ Bảy. 
+(B) Lúc bảy giờ. 
+(C) Nó ở trong rạp hát.</p><p id="da7e2eed-0116-4066-8863-16c4d7331a97" class="">
+</p></div></div><p id="97b236a4-7832-4164-9546-3f6bbd82370e" class="">8.</p><figure id="5bed05d8-b773-4110-8067-80663a4de1e6"><div class="source"><a href="Test%2004%20ba93d094bf3c4e528db33b5c35b3bba4/part2-8.mp3">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8afb4798-438c-4faf-a359-3ebb4da9c381/part2-8.mp3</a></div></figure><div id="56f4bd66-5fad-430b-b385-bf4258baeeae" class="column-list"><div id="2c9b5747-89a8-462f-94ba-e3cbc9da8909" style="width:50%" class="column"><p id="77af3fe5-fcf4-4b27-a54d-e1528f5fc844" class="">Where is the furniture department?
+<strong>(A) On the tenth floor.
+</strong>(B) A sofa and two chairs.
+(C) I took it apart.</p></div><div id="8a22e7a8-3cd8-4c68-80d1-a9e8f0d7047b" style="width:50%" class="column"><p id="0c257727-35ed-4953-80d8-e0a227fefd92" class="">Bộ phận nội thất ở đâu? 
+(A) Trên tầng mười. 
+(B) Một chiếc ghế sofa và hai chiếc ghế. 
+(C) Tôi đã tháo nó ra.</p></div></div><p id="115dde0c-ca6a-4578-a072-6ee5a1a5ab2a" class="">9.</p><figure id="644eae45-eb1b-4d29-983b-993168fa84af"><div class="source"><a href="Test%2004%20ba93d094bf3c4e528db33b5c35b3bba4/part2-9.mp3">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9a4bbb07-e0dd-4477-93be-49b93f4f040f/part2-9.mp3</a></div></figure><div id="1f585593-b0a2-440f-b781-034b69f8c72b" class="column-list"><div id="43477980-f06b-4b83-ad23-c8704106c30c" style="width:50%" class="column"><p id="c96de184-4139-4273-852f-ef8b0dfe0303" class="">Who led the budget presentation yesterday?
+(A) Yes, I read it.
+(B) The main conference room.
+<strong>(C) Ms. Varma did.</strong></p></div><div id="69203997-e811-4800-885b-a5504a75e222" style="width:50%" class="column"><p id="d52d1627-0947-498d-a029-8718c96ea0db" class="">Ai đã dẫn đầu buổi trình bày ngân sách ngày hôm qua? 
+(A) Vâng, tôi đã đọc nó. 
+(B) Phòng họp chính. 
+(C) Cô Varma đã làm.</p></div></div><p id="c7bfa55c-1064-4386-a20f-9ce600aee481" class="">10.</p><figure id="b66cf9d1-0284-4251-9507-bb5063e0d565"><div class="source"><a href="Test%2004%20ba93d094bf3c4e528db33b5c35b3bba4/part2-10.mp3">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/168dd620-b482-4560-bb28-2eaca72da323/part2-10.mp3</a></div></figure><div id="e36da7dc-44e6-49b8-8a23-93a6626d5fc3" class="column-list"><div id="182d4aef-47b7-4db0-88cc-c46bb79322c0" style="width:50%" class="column"><p id="b6a7e934-8492-40ad-9235-7ee2df31f202" class="">Would you rather drive to the game or take the train?
+<strong>(A) Let&#x27;s drive.
+</strong>(B) On Thursday, I believe.
+(C) Please take it with you.</p></div><div id="4985cf91-8462-4c77-85e3-ab739dcf84a7" style="width:50%" class="column"><p id="210394a3-a4d1-4310-abdd-b2f349dffd33" class="">Bạn muốn lái xe đến trò chơi hay đi tàu? 
+(A) Hãy lái xe đi. 
+(B) Tôi tin là vào thứ Năm. 
+(C) Vui lòng mang nó theo.</p></div></div><p id="6adeb9ba-ba60-48e7-8d9f-2c8bf850f26a" class="">11.</p><figure id="53788737-19f9-4bd8-bdbc-e738c4d5a63e"><div class="source"><a href="Test%2004%20ba93d094bf3c4e528db33b5c35b3bba4/part2-11.mp3">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/66e4d912-27d5-407e-9116-088fff4d24ce/part2-11.mp3</a></div></figure><div id="6b21b81f-ece2-48af-90a0-d0ee5203eafe" class="column-list"><div id="f8994f84-83d3-45bc-935e-cb306a5fd11e" style="width:50%" class="column"><p id="eb88d09e-9c0d-49cf-8193-d12d923f3061" class="">When are they announcing the winner of the
+competition?
+(A) At the radio station.
+<strong>(B) By the end of the week.</strong>
+(C) A gift certificate.</p></div><div id="655ea93c-f163-4fc0-a8a9-9c7795282e0f" style="width:50%" class="column"><p id="f426aa95-c19e-4fc6-b696-5f508a320d90" class="">Khi nào họ công bố người chiến thắng của cuộc thi?
+(A) Tại đài phát thanh. 
+(B) Vào cuối tuần. 
+(C) Một phiếu quà tặng.</p></div></div><p id="af7a56bd-5c0f-499e-93b4-091454e88f54" class="">12.</p><figure id="ca0fe080-4c0d-4108-939c-faffabbc36ac"><div class="source"><a href="Test%2004%20ba93d094bf3c4e528db33b5c35b3bba4/part2-12.mp3">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/43f0b772-c583-4cd6-8021-080a0cc3ba9f/part2-12.mp3</a></div></figure><div id="675f4138-7662-48d3-ae1c-4268ee334ca6" class="column-list"><div id="1628dcd0-1ea7-47b5-8633-4331b6d5f89b" style="width:50%" class="column"><p id="6fb6bd98-7fd0-4532-90bf-71649f4b1fcc" class="">Would you like to make a donation to the arts
+council fund?
+(A) No thanks, I have some.
+(B) He&#x27;s very generous.
+<strong>(C) Sure, here&#x27;s five dollars.</strong></p><p id="6fc82931-0dd4-4796-9c19-deaa05bccacb" class="">13.</p></div><div id="7a281ab8-086b-4d97-abe2-1c5e07d83557" style="width:50%" class="column"><p id="56ebd524-af79-4f2a-8e43-007d1e9d95f9" class="">Bạn có muốn quyên góp cho quỹ hội đồng nghệ thuật không? 
+(A) Không, cảm ơn, tôi có một ít. 
+(B) Anh ấy rất hào phóng. 
+(C) Chắc chắn rồi, đây là 5 đô la.</p></div></div><figure id="3daab6cc-d105-4aca-a67b-06d8dc64baed"><div class="source"><a href="Test%2004%20ba93d094bf3c4e528db33b5c35b3bba4/part2-13.mp3">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0b8b898e-819e-4780-85d6-e485963cb399/part2-13.mp3</a></div></figure><div id="cc229511-e671-4cda-91f7-197c94532544" class="column-list"><div id="a819ffe9-4db6-4ac6-a2bc-9c622e50130f" style="width:50%" class="column"><p id="053df958-8c03-47a5-b27d-60917ce563b5" class="">Who chose the restaurant for the company
+banquet?
+(A) Maybe once last year.
+<strong>(B) Someone from Human Resources.</strong>
+(C) Next Friday evening.</p></div><div id="c18f886d-32a7-45cb-97ea-a40752336fd1" style="width:50%" class="column"><p id="b9b9dd79-6b66-419b-853d-ed405bad8952" class="">Ai đã chọn nhà hàng cho công ty bữa tiệc? 
+(A) Có thể một lần vào năm ngoái. 
+(B) Ai đó từ Phòng Nhân sự. 
+(C) Tối thứ Sáu tới.</p><p id="025912a5-8e71-4634-ba74-f3cbf94056e1" class="">
+</p></div></div><p id="12933c5f-47dd-4255-9ea8-ee8d2cfe3ae3" class="">14.</p><p id="53fa6f88-0f62-4d68-9294-26af1c2bd3ae" class="">
+</p><figure id="5d89451a-6451-46a4-8d0e-c383978d351d"><div class="source"><a href="Test%2004%20ba93d094bf3c4e528db33b5c35b3bba4/part2-14.mp3">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9328d9e2-2416-44c1-b35e-f635f492d7cb/part2-14.mp3</a></div></figure><div id="71993bf9-f212-437b-a1ec-c03561a92e69" class="column-list"><div id="1ebb736f-bfc0-4e2d-9254-2b370b9120e6" style="width:50%" class="column"><p id="df01fc19-bc1c-4385-bf98-1af5a000da7e" class="">Are you going to accept the management position?
+(A) Everyone else.
+(B) They&#x27;re in finance.
+<strong>(C) Yes, I start June first.</strong></p></div><div id="1b49dccb-3d05-407a-bf78-6f6e5d3595cc" style="width:50%" class="column"><p id="64aa8b93-a207-4ef2-8efa-aae3387e31e0" class="">Bạn sẽ chấp nhận vị trí quản lý? 
+(A) Mọi người khác. 
+(B) Họ đang ở trong lĩnh vực tài chính. 
+(C) Vâng, tôi bắt đầu vào tháng Sáu đầu tiên.</p><p id="c1ec59e4-ed02-4c13-8eda-841387e37362" class="">
+</p></div></div><p id="8a87509c-1cc6-48fa-9d77-8b8a3f6b5362" class="">15.</p><figure id="4b6f62a0-c446-4d07-a9f7-44bc0acfc5ed"><div class="source"><a href="Test%2004%20ba93d094bf3c4e528db33b5c35b3bba4/part2-15.mp3">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/69ae5bba-258e-4a96-90b3-2fd69759f09f/part2-15.mp3</a></div></figure><div id="3faba9e2-e85d-45a7-8340-491bd99e3fdb" class="column-list"><div id="d962e344-71a3-4de0-821a-cac7be633aba" style="width:50%" class="column"><p id="80aa8672-9b42-4bb7-98f1-d9df393568a2" class="">Which spaces are designated for visitor parking?
+(A) Only for two hours.
+(B) It&#x27;s alright, I&#x27;ll take the bus.
+<strong>(C) The ones with yellow signs.</strong></p><p id="0e8410f0-e1a7-47a3-ba23-b351ba6c41ba" class="">16.</p></div><div id="86e62216-e4a6-4071-96e7-643e952fe341" style="width:50%" class="column"><p id="4305103e-5149-4542-809a-e03744ac7d42" class="">Những không gian nào được chỉ định cho bãi đậu xe của khách? 
+(A) Chỉ trong hai giờ. 
+(B) Không sao đâu, tôi sẽ đi xe buýt. 
+(C) Những cái có dấu hiệu màu vàng.</p><p id="5c35feea-bcd5-458f-864b-d52800beba31" class="">
+</p></div></div><figure id="07a94e00-46fb-47b1-a10b-6ce691f732f7"><div class="source"><a href="Test%2004%20ba93d094bf3c4e528db33b5c35b3bba4/part2-16.mp3">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9bb52fe9-2f00-4c3c-8007-baa5cdbfa610/part2-16.mp3</a></div></figure><div id="519a0dae-2838-4735-92a6-8aaeafc1f0d6" class="column-list"><div id="d195f3cc-2a94-41d6-a24b-a49c6f0a7fba" style="width:50%" class="column"><p id="6fd2dc25-805c-43f0-9f6f-97242a64660c" class="">Wouldn&#x27;t you rather meet in a conference room?
+(A) It usually doesn&#x27;t.
+(B) A three o&#x27;clock meeting.
+<strong>(C) It would be quieter.</strong></p></div><div id="144f0c4b-324c-4efe-be5c-20a676d33c3d" style="width:50%" class="column"><p id="db39fb10-73c5-4740-b0da-76207e425eae" class="">Bạn không muốn gặp trong một phòng hội nghị? 
+(A) Thường thì không. 
+(B) Một cuộc họp lúc 3 giờ. 
+(C) Nó sẽ yên tĩnh hơn.</p></div></div><p id="24cb5125-b39c-4dcd-92bf-502baf00e63e" class="">17.</p><figure id="e568f859-b480-4eba-ac26-8f9bcd5e7b9d"><div class="source"><a href="Test%2004%20ba93d094bf3c4e528db33b5c35b3bba4/part2-17.mp3">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5e120df0-fb96-4526-b358-84e02db05f75/part2-17.mp3</a></div></figure><div id="e2dd2645-a46a-4c22-81e9-a250c0b55bee" class="column-list"><div id="feb65208-2553-481f-840e-596e0d6cab92" style="width:50%" class="column"><p id="5be4bcda-6c55-4c56-aa6a-4de795a7bafe" class="">Do you know who this jacket belongs to?
+(A) Yes, very expensive.
+<strong>(B) No, where did you find it?</strong>
+(C) It won&#x27;t take too long.</p><p id="a29c0e98-f133-414b-bb29-d6a779aa88c0" class="">18.</p></div><div id="eb7e8fba-8508-4d9e-847b-68fddcbde298" style="width:50%" class="column"><p id="5db9395c-7c7a-4604-8edb-3ccbadb119bb" class="">Bạn có biết chiếc áo khoác này thuộc về ai không? 
+(A) Vâng, rất đắt. 
+(B) Không, bạn đã tìm thấy nó ở đâu? 
+(C) Sẽ không mất quá nhiều thời gian đâu.</p></div></div><figure id="1172571b-9ded-4d28-a47c-40744c4d61a8"><div class="source"><a href="Test%2004%20ba93d094bf3c4e528db33b5c35b3bba4/part2-18.mp3">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/79f7163f-07a8-416a-957b-e474b803073f/part2-18.mp3</a></div></figure><div id="2d6a01f2-53b2-4753-a185-09972c0de63f" class="column-list"><div id="191d5a57-3751-4490-b504-4f4c43d34724" style="width:50%" class="column"><p id="af87aca6-697a-4323-9c43-0ef72ff484aa" class="">Let&#x27;s work through lunch to finish the project.
+(A) A sandwich and an apple.
+<strong>(B) But I really need a break!</strong>
+(C) It was this morning.</p></div><div id="9dc93b41-b994-49ac-878c-7b0b2d70db36" style="width:50%" class="column"><p id="1c62f5a8-d793-4147-a4b0-92da257100be" class="">Hãy làm việc xuyên trưa để hoàn thành dự án. 
+(A) Một chiếc bánh sandwich và một quả táo. (B) Nhưng tôi thực sự cần nghỉ ngơi! 
+(C) Đó là sáng nay.</p></div></div><p id="3adaa14c-6a70-4906-a3e5-b910391cd8bb" class="">19.</p><figure id="5cdd21b2-5530-4bdc-8a40-a30c0f433525"><div class="source"><a href="Test%2004%20ba93d094bf3c4e528db33b5c35b3bba4/part2-19.mp3">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e0204af1-8281-4c72-8ecf-0150c9703dd3/part2-19.mp3</a></div></figure><div id="dba4e5db-4cc7-4dad-bf09-14f8618269dd" class="column-list"><div id="bf1e1a95-5d1b-43b8-969f-090887ea75b0" style="width:50%" class="column"><p id="e7b7740f-601d-4914-817c-24188c1ca52e" class="">Why does Dr. Yang need another lab assistant?
+<strong>(A) I didn&#x27;t know he requested one.</strong>
+(B) At least three years experience.
+(C) Yes, we visited the new lab.</p><p id="c777bc53-91dd-4de4-877e-44df72e0b1c2" class="">
+</p></div><div id="8ce35c90-7e1f-4eff-8904-0194ca4649a4" style="width:50%" class="column"><p id="e6087af7-8c07-432f-b948-6011e6491203" class="">Tại sao Tiến sĩ Yang cần một trợ lý phòng thí nghiệm khác? 
+(A) Tôi không biết anh ấy đã yêu cầu. 
+(B) Ít nhất ba năm kinh nghiệm. 
+(C) Vâng, chúng tôi đã đến thăm phòng thí nghiệm mới.</p></div></div><p id="2b1d72a3-f82b-4ec1-8426-5333ca25604f" class="">20.</p><figure id="3070745c-5786-4ea2-bcf3-f843fa14489d"><div class="source"><a href="Test%2004%20ba93d094bf3c4e528db33b5c35b3bba4/part2-20.mp3">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/34d35d0e-a050-4b6b-b84d-10a642b8afa8/part2-20.mp3</a></div></figure><div id="7010399e-b5e2-46d1-96fa-b79c4f7620fc" class="column-list"><div id="61f5e447-16e9-4cff-8b21-5cfe32db626f" style="width:50%" class="column"><p id="74d5fc3b-3d76-47a9-8ddd-9165666c1e61" class="">Dr. Martinez will be free this afternoon.
+(A) I&#x27;ve been here before.
+<strong>(B) What about tomorrow morning?</strong>
+(C) The pharmacy is just downstairs.</p></div><div id="ad84165a-c4a6-476e-bac2-fe2cf06d5139" style="width:50%" class="column"><p id="c3cf8f1a-794f-4747-9c67-539783e60b6c" class="">Tiến sĩ Martinez sẽ rảnh chiều nay. 
+(A) Tôi đã từng ở đây trước đây. 
+(B) Còn sáng mai thì sao? 
+(C) Hiệu thuốc ở ngay tầng dưới.</p></div></div><p id="fa43e6b3-cbd6-4a6e-a203-78a1f4d21350" class="">21.</p><p id="85450550-2423-4104-8737-b91ccbb7c71a" class="">
+</p><figure id="22af2ca4-1600-4349-8f51-d3972e271e9b"><div class="source"><a href="Test%2004%20ba93d094bf3c4e528db33b5c35b3bba4/part2-21.mp3">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9b3c8eb6-4a04-45ed-8c49-c74d360de482/part2-21.mp3</a></div></figure><div id="5cea86dd-1019-4346-a761-b292ab4e595b" class="column-list"><div id="e3e58e2a-94fb-484f-b039-261f359b0b5d" style="width:50%" class="column"><p id="3d05695a-c477-41e3-a000-52192c5f74e3" class="">Can I write an article on the festival for Tuesday&#x27;s newspaper?
+(A) You&#x27;re right; it&#x27;s too long.
+<strong>(B) The deadline has passed.</strong>
+(C) He&#x27;s at the museum now.</p><p id="058e391f-60d5-4ace-b555-07a20255fd46" class="">22.</p></div><div id="dad06159-4918-42cd-b4a9-891f49c67a02" style="width:50%" class="column"><p id="d3d5d751-7cf8-420d-a8bf-160e91429f7e" class="">Tôi có thể viết một bài báo về lễ hội cho tờ báo thứ ba không?
+(A) Bạn nói đúng; nó quá dài. 
+(B) Thời hạn đã qua. 
+(C) Bây giờ anh ấy đang ở viện bảo tàng.</p><p id="27456e87-b45b-414a-9ac3-5f3062c01c19" class="">
+</p></div></div><figure id="90ad2c99-b64e-45d6-af78-3b9c4a2e9f7e"><div class="source"><a href="Test%2004%20ba93d094bf3c4e528db33b5c35b3bba4/part2-22.mp3">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9ba4e5c9-86aa-43f9-9bb1-3360462864eb/part2-22.mp3</a></div></figure><div id="b6cf01e6-53fd-4d39-b3e8-8123eff76bcc" class="column-list"><div id="7623920f-679f-4c2a-942b-98318b9887db" style="width:50%" class="column"><p id="57befccf-93da-4896-8250-605b1c393073" class="">Don&#x27;t you want to see the apartment?
+(A) West of Main Street.
+(B) We had to order a part.
+<strong>(C) I&#x27;ve found a place already.</strong></p></div><div id="98d64108-d9d2-4bf6-b1eb-1ccb99cdbaa5" style="width:50%" class="column"><p id="7c6342ff-9475-421f-ba50-bc311e31cea2" class="">Bạn không muốn xem căn hộ? 
+(A) Phía Tây Phố Chính. 
+(B) Chúng tôi phải đặt hàng một phần. 
+(C) Tôi đã tìm thấy một nơi rồi.</p></div></div><p id="e54c569b-73cc-4b7f-a890-234d0324f552" class="">23.</p><p id="225f967e-ca1a-4039-80a0-a6572f18b12e" class="">
+</p><figure id="05fde274-853b-443b-843f-639caa21ee97"><div class="source"><a href="Test%2004%20ba93d094bf3c4e528db33b5c35b3bba4/part2-23.mp3">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8294a5f8-1f98-462f-b815-c93d003c14fb/part2-23.mp3</a></div></figure><div id="87226032-fc09-469a-ada2-96ac18707fc9" class="column-list"><div id="59851f06-ea31-4bd4-b698-448af7960f9f" style="width:50%" class="column"><p id="e2c48f79-b4e8-4b4a-b5c5-b51c78fa80b0" class="">Should I order the supplies now, or wait until next week?
+(A) A total of seventy-five dollars.
+<strong>(B) Actually, I already sent the order.</strong>
+(C) It&#x27;s in the supply closet.</p><p id="706f4914-9439-4651-86dc-77cd6d738495" class="">24.</p></div><div id="082d6821-9aba-4b45-b8c2-32dd0f9cd830" style="width:50%" class="column"><p id="055e0a78-387f-4a08-88e3-5267c408ebd2" class="">Tôi có nên đặt hàng ngay bây giờ hay đợi đến tuần sau?
+(A) Tổng cộng là bảy mươi lăm đô la. 
+(B) Thực ra, tôi đã gửi đơn đặt hàng rồi. 
+(C) Nó ở trong tủ cung ứng.</p></div></div><figure id="687d4c07-f0df-400b-9493-38601cda93aa"><div class="source"><a href="Test%2004%20ba93d094bf3c4e528db33b5c35b3bba4/part2-24.mp3">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4a5f4fc4-fe40-46f3-bbfb-ea4dcfcb031c/part2-24.mp3</a></div></figure><div id="21d1a7d1-97ac-423f-af88-90a1505c6fd8" class="column-list"><div id="1d4e765d-9408-43e3-8716-5e49a18393e7" style="width:50%" class="column"><p id="51115837-eda4-463a-bf3a-91c89bb19626" class="">How should I store these photographs?
+<strong>(A) Mateo is responsible for that.</strong>
+(B) From the company picnic.
+(C) Yes, the staff is very helpful.</p><p id="168b2ee4-b32f-4e7a-b587-884576db8fba" class="">
+</p><p id="d2ad5d25-0bc8-4030-85c2-7ca718687780" class="">25.</p></div><div id="19184fa4-0026-437f-af6b-3749a5d55f54" style="width:50%" class="column"><p id="1a5bf26c-6fe7-4c2c-b680-a16e000b2cbc" class="">Tôi nên lưu trữ những bức ảnh này như thế nào? 
+(A) Mateo chịu trách nhiệm về việc đó. 
+(B) Từ buổi dã ngoại của công ty. 
+(C) Vâng, nhân viên rất hữu ích.</p></div></div><figure id="30ab34f6-8a71-4aac-a52f-9e1495388356"><div class="source"><a href="Test%2004%20ba93d094bf3c4e528db33b5c35b3bba4/part2-25.mp3">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4581304c-dff6-4360-b68d-926df258640b/part2-25.mp3</a></div></figure><div id="da171407-5ba1-4c26-bdad-4b886ef299bd" class="column-list"><div id="95374546-21ce-4029-8b55-40a6874ac38f" style="width:50%" class="column"><p id="f2d41c15-206c-4b63-bd7e-007e4fece581" class="">Where should I set up the equipment for the photo shoot?
+<strong>(A) That&#x27;s scheduled for next week.</strong>
+(B) It was taken in Amsterdam.
+(C) I got it from the electronics store.</p><p id="77551afb-3ba4-4fa3-a421-14807ce3b114" class="">26.</p></div><div id="2732e786-9a40-4ccf-8506-69d409a7e853" style="width:50%" class="column"><p id="324a885e-84b1-4343-a94b-3afc5c8ca1ef" class="">Tôi nên chuẩn bị thiết bị chụp ảnh ở đâu?
+(A) Đó là kế hoạch cho tuần tới. 
+(B) Nó được chụp ở Amsterdam. 
+(C) Tôi đã mua nó từ cửa hàng điện tử.</p></div></div><figure id="2d332f96-c0ce-4b0f-bcd9-ac297b325b9e"><div class="source"><a href="Test%2004%20ba93d094bf3c4e528db33b5c35b3bba4/part2-26.mp3">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5e8cfdd2-9e71-4a29-a790-56de1b5bcd6a/part2-26.mp3</a></div></figure><div id="42d98271-fa4f-4a24-8bd4-7790086c6839" class="column-list"><div id="932affe3-52ca-4e8d-bd28-2c238304b270" style="width:50%" class="column"><p id="56ff38be-edd3-48c0-b432-52cdb8a38b8d" class="">You haven&#x27;t seen Jennifer today, have you?
+<strong>(A) I saw her a while ago.</strong>
+(B) I don&#x27;t have any yet.
+(C) No, my name&#x27;s Janet.</p></div><div id="f62bfacd-050f-4225-abe4-402cf78a22ab" style="width:50%" class="column"><p id="48df1128-d977-4921-937e-c18ec9a8df3d" class="">Hôm nay bạn không gặp Jennifer phải không? 
+(A) Tôi đã gặp cô ấy một lúc trước. 
+(B) Tôi chưa có cái nào cả. 
+(C) Không, tên tôi là Janet.</p></div></div><p id="d8c84c7d-90fa-4022-817a-a412472325f1" class="">27.</p><figure id="9616a805-4c7b-4bfe-9b7f-b3ea9c56e5d8"><div class="source"><a href="Test%2004%20ba93d094bf3c4e528db33b5c35b3bba4/part2-27.mp3">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/525febcd-bb60-4327-bca2-361a97342ae8/part2-27.mp3</a></div></figure><div id="1563c5ed-b798-4ffb-8596-b27dba6ae2dd" class="column-list"><div id="8020d6a2-4e0c-49a5-bfa7-ce2bab11dd52" style="width:50%" class="column"><p id="ff73b3ce-6ea1-4bf7-945e-177c5e965eb2" class="">Could you help me find the Murphy Company file?
+(A) I&#x27;m fine, thanks.
+(B) He left a while ago.
+<strong>(C) I don&#x27;t work on that account.</strong></p></div><div id="39c39edd-8083-469f-b8dd-91299c371999" style="width:50%" class="column"><p id="35a3ac8a-d96d-454e-808c-77236c0fa5de" class="">Bạn có thể giúp tôi tìm hồ sơ của Công ty Murphy không? 
+(A) Tôi ổn, cảm ơn. 
+(B) Anh ấy đã rời đi một lúc trước. 
+(C) Tôi không làm việc với tài khoản đó.</p></div></div><p id="0e036594-36ae-44e0-9486-3b24344e73f4" class="">28.</p><figure id="386e93dd-4b26-4492-be8c-104ba47c06aa"><div class="source"><a href="Test%2004%20ba93d094bf3c4e528db33b5c35b3bba4/part2-28.mp3">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ce5246ba-84a8-408b-b8fd-06c401f87b43/part2-28.mp3</a></div></figure><div id="9df55c14-b1e3-4e97-8a56-1d1d1bafcde2" class="column-list"><div id="6f48cdc1-a9b2-4f99-914b-c3be813a1f36" style="width:50%" class="column"><p id="54148fcd-7c38-428e-8596-03cc75f3ba19" class="">Why has the workshop been canceled?
+(A) About twenty minutes ago.
+(B) In room fourteen.
+<strong>(C) Because many people couldn&#x27;t attend.</strong></p></div><div id="23021ac8-897a-4ee8-b5b5-015db4d78b04" style="width:50%" class="column"><p id="b0d5ccf8-1ba8-4183-bf82-bbfcf33f6178" class="">Tại sao hội thảo đã bị hủy bỏ? 
+(A) Khoảng hai mươi phút trước. 
+(B) Trong phòng mười bốn. 
+(C) Bởi vì nhiều người không thể tham dự.</p></div></div><p id="dbbd17a7-1605-4b60-8807-2cb824032406" class="">29.</p><p id="f0f9755d-af59-42c9-82dd-6424ddcc3c3d" class="">
+</p><figure id="3f6bf52f-30ba-4e79-ba7b-805f625e2f3f"><div class="source"><a href="Test%2004%20ba93d094bf3c4e528db33b5c35b3bba4/part2-29.mp3">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0b4f1287-eeb7-44f8-a644-7c2aa9a6c27b/part2-29.mp3</a></div></figure><div id="424d43b9-4638-4cd1-9b8c-49236b383160" class="column-list"><div id="2dee89b7-3f13-4894-84c9-aad9769a4f71" style="width:50%" class="column"><p id="a9f44f4b-aa94-4523-a44b-f03150fd8745" class="">You&#x27;ve already signed the contract, haven&#x27;t you?
+<strong>(A) I&#x27;ll do it right now.
+</strong>(B) Yes, I turned it off.
+(C) What does the sign say?</p></div><div id="33b5190a-6376-4fbf-839c-cb7346e7e596" style="width:50%" class="column"><p id="85781080-7a82-4e66-8a25-3052f7ebe056" class="">Bạn đã ký hợp đồng rồi phải không? 
+(A) Tôi sẽ làm ngay bây giờ. 
+(B) Vâng, tôi đã tắt nó.
+(C) Dấu hiệu nói gì?</p></div></div><p id="07644831-19ba-4ed9-8765-be2de49532ce" class="">30.</p><figure id="0c8b8428-0c4e-4bf8-82d7-0e1dbd6362bd"><div class="source"><a href="Test%2004%20ba93d094bf3c4e528db33b5c35b3bba4/part2-30.mp3">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/583a8bc2-1669-4037-9c2f-368d342959fe/part2-30.mp3</a></div></figure><div id="5ac6cd4f-dc9a-4a0f-a64c-33aaeab1e7b1" class="column-list"><div id="cc9100d0-3efb-4bac-9f60-b0a33cce3bb2" style="width:50%" class="column"><p id="2c1aee7f-4ad4-4290-8196-34b4ef817db2" class="">I thought the professional development training was really helpful.
+(A) I&#x27;d be happy to help.
+<strong>(B) That was my experience, too.</strong>
+(C) Sure, I&#x27;ll take care of it.</p></div><div id="b5bf59d0-da2a-4b25-a862-683872265df7" style="width:50%" class="column"><p id="1c908691-d045-4202-894d-f8900c66aae2" class="">Tôi nghĩ rằng khóa đào tạo phát triển chuyên nghiệp thực sự hữu ích. 
+(A) Tôi rất sẵn lòng giúp đỡ. 
+(B) Đó cũng là kinh nghiệm của tôi.
+(C) Chắc chắn, tôi sẽ chăm sóc nó.</p></div></div><p id="53fb3842-8e69-4e90-8711-447979dad631" class="">31.</p><figure id="4ef0a42f-330f-4b23-890f-9d7ba7d9b603"><div class="source"><a href="Test%2004%20ba93d094bf3c4e528db33b5c35b3bba4/part2-31.mp3">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/650a50d9-57d6-4c1a-b768-045c78a17a3c/part2-31.mp3</a></div></figure><div id="3f0b328e-6609-4401-a5b6-1b64bab5d2a4" class="column-list"><div id="4846a98c-2127-42f9-9c2a-0710f782cb07" style="width:50%" class="column"><p id="2ce8c12d-54a4-4b35-b001-5b9477f2f6f7" class="">Where did you make the dinner reservation?
+(A) Tomorrow at twelve-thirty.
+(B) Didn&#x27;t you make it?
+(C) For fourteen people.</p></div><div id="67ab2ba6-a717-47af-b6de-0612095e3e72" style="width:50%" class="column"><p id="84949841-60ac-401f-9cd3-15f78bd19c1b" class="">Bạn đã đặt chỗ ăn tối ở đâu? 
+(A) Ngày mai lúc mười hai giờ ba mươi. 
+(B) Bạn không làm được sao?
+(C) Cho mười bốn người.</p></div></div><h3 id="aa7c5a9b-104f-4951-915b-bd541742ff3c" class="">Part 3</h3><p id="0e2a31ab-ad12-4349-a411-d35e126cfeac" class="">32-34</p><p id="5f210578-5638-4d17-abfc-7573b9a1753d" class="">
+</p><figure id="a0412a8f-ce77-4bf4-9b67-dcc244586005"><div class="source"><a href="Test%2004%20ba93d094bf3c4e528db33b5c35b3bba4/part3-32-34.mp3">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3449cdfa-6dec-4092-ba84-91bc26348a00/part3-32-34.mp3</a></div></figure><div id="b0848619-a8fb-4404-a20f-16f9caa1ac47" class="column-list"><div id="6c1acb21-0d93-4adb-942d-850ee59c1c95" style="width:50%" class="column"><p id="93389aa1-8657-440a-9b56-8bc2d225942f" class="">Hi Karen, I wonder if you can help me. <mark class="highlight-red">32</mark> I
+have a doctor&#x27;s appointment tomorrow afternoon, <mark class="highlight-red">33</mark><mark class="highlight-brown"> </mark>so I need someone to take my
+shift at the restaurant.
+<mark class="highlight-red">33</mark> No problem-I can do that. Would you
+cover my shift next Monday evening in
+exchange?
+Of course. <mark class="highlight-red">34</mark> I&#x27;ll let the supervisor know
+about the change in schedule right now.</p></div><div id="65f7d4bc-7536-4fea-9b0b-f01e18b327a6" style="width:50%" class="column"><p id="05d24c00-8212-42ec-9516-d678a2388b87" class="">Xin chào Karen, tôi tự hỏi nếu bạn có thể giúp tôi. Chiều mai tôi có hẹn với bác sĩ nên cần người thay ca ở nhà hàng. 
+Không vấn đề gì - tôi có thể làm điều đó. Đổi lại, bạn có bao gồm ca làm việc của tôi vào tối thứ Hai tới không? 
+Tất nhiên rồi. Tôi sẽ cho người giám sát biết về sự thay đổi trong lịch trình ngay bây giờ.</p></div></div><p id="6fbbd493-8701-47f2-b10a-c6d362a8edaf" class="">32. </p><div id="2f228287-acb8-4f9a-a48d-4eece823139a" class="column-list"><div id="deeaa21d-dee0-459e-a5ec-1489be437140" style="width:50%" class="column"><p id="c4ca2e80-df12-4124-a05a-bb81d371440e" class="">What does the man say he has to do tomorrow?
+(D) Plan an event
+(A) Have his car fixed
+<strong>(B) See a doctor</strong>
+(C) Submit a report</p></div><div id="818b1938-d4a2-40c3-9350-fa366bc1a7be" style="width:50%" class="column"><p id="ab544f13-93b3-4e33-99f0-b15b339cc761" class="">Người đàn ông nói anh ta phải làm gì vào ngày mai?
+(D) Lên kế hoạch cho một sự kiện
+(A) Sửa xe của anh ấy
+(B) Đi khám bác sĩ
+(C) Gửi báo cáo</p></div></div><div id="36359df5-3c26-4cd1-8cb5-f4594d3ff126" class="column-list"><div id="fa7ea886-4106-4eeb-b854-c476b679c7cb" style="width:50%" class="column"><p id="53d387c9-d5b1-40bc-bc94-01b0248619e8" class="">33.
+What do the speakers agree to do?
+(B) Meet at a restaurant
+(A) Collaborate on a project
+(C) Exchange contact information
+<strong>(D) Trade work shifts</strong></p></div><div id="3b8e331c-6f5c-4857-abe3-e1d248f51824" style="width:50%" class="column"><p id="6877afae-5cf4-4901-87da-46bb0843866a" class="">
+</p><p id="177f45c4-91aa-45d5-8733-3dd453f56cc0" class="">Người nói đồng ý làm gì?
+(B) Gặp nhau tại một nhà hàng
+(A) Hợp tác trong một dự án
+(C) Trao đổi thông tin liên lạc
+(D) Ca làm việc thương mại</p></div></div><p id="c74eb7c7-da45-4f4e-af23-4fc4bd5bd345" class="">34.</p><div id="6f99db6b-9173-46a8-9ace-29aea8b54728" class="column-list"><div id="7d6213ee-0a93-4317-abe0-7d14ac722a5a" style="width:50%" class="column"><p id="918cb891-bbbd-4558-8d19-8b4a9919ee6c" class="">What will the man probably do next?
+<strong>(A) Notify a manager
+</strong>(B) Cancel an appointment
+(C) Train new staff
+(D) Clean a work area</p></div><div id="be85803b-b79f-46b5-a273-84d0436c25ad" style="width:50%" class="column"><p id="e7429dde-ede8-4439-99d5-465413f7ee6c" class="">Người đàn ông có thể sẽ làm gì tiếp theo?
+(A) Thông báo cho người quản lý
+(B) Hủy cuộc hẹn
+(C) Đào tạo nhân viên mới
+(D) Dọn dẹp khu vực làm việc</p></div></div><p id="72c42a18-763c-4cfb-ba3f-bac52a1429df" class="">35-37</p><p id="f406d0d9-db50-4f70-aff8-0b9a8542677f" class="">
+</p><figure id="924d8ea2-c935-4ac8-94d1-50ac552c0842"><div class="source"><a href="Test%2004%20ba93d094bf3c4e528db33b5c35b3bba4/part3-35-37.mp3">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5617a3aa-8177-42b9-bb73-045595c654d1/part3-35-37.mp3</a></div></figure><div id="5d4ea912-21f7-4ef8-aa4c-c5e610dc87c7" class="column-list"><div id="8c754398-2c29-4c69-9a25-8224118cc09e" style="width:50%" class="column"><p id="3869a675-a817-4242-bdf1-e5da393b3633" class="">Hi Ken, hi Julio! <mark class="highlight-red">35</mark> How did the art gallery opening go last weekend? Was the client happy with the marketing materials?
+</p><p id="eb634bbd-5e81-4aea-8ed1-3f7ee8631a25" class="">Alfredo? <mark class="highlight-red">35 </mark>He was very pleased. <mark class="highlight-red">36 </mark>He said
+he thought the brochures we designed were one of the main reasons for such a great turnout.
+</p><p id="dc678864-0abd-4888-8b42-aaafdbf07144" class=""><mark class="highlight-red">35 </mark>And it&#x27;s worth checking out the gallery when you have some time. I&#x27;m sure Alfredo would be happy to give you a tour.
+Yes, the place is so bright and modern, with a fantastic collection of local works of art.
+<mark class="highlight-red">37</mark> You know, I&#x27;m taking a vacation in that area in February. I&#x27;ll make a point of visiting him.</p></div><div id="4ab3524b-fa21-4878-9967-dcaa156ea0f7" style="width:50%" class="column"><p id="32c80624-cdf0-4a1e-8eae-d599d9e6a3c1" class="">Chào Ken, chào Julio! Buổi khai trương phòng trưng bày nghệ thuật diễn ra vào cuối tuần trước như thế nào? Khách hàng có hài lòng với các tài liệu tiếp thị không?
+Alfredo? Anh ấy rất hài lòng. Anh ấy nói rằng anh ấy nghĩ những tờ quảng cáo mà chúng tôi thiết kế là một trong những lý do chính khiến số lượng cử tri đi bỏ phiếu lớn như vậy.
+Và thật đáng để xem thư viện khi bạn có thời gian. Tôi chắc rằng Alfredo sẽ rất vui khi được đưa bạn đi tham quan.
+Vâng, nơi này rất sáng sủa và hiện đại, với một bộ sưu tập tuyệt vời các tác phẩm nghệ thuật địa phương.
+Bạn biết đấy, tôi sẽ đi nghỉ ở khu vực đó vào tháng Hai. Tôi sẽ đến thăm anh ấy.</p></div></div><p id="b1cb2d72-23f3-4d2b-a4d6-a1bd75eeedd6" class="">
+</p><div id="6f1e6616-6e39-41f7-9f71-c1a051abf3d2" class="column-list"><div id="fb94aaa6-46f2-4147-bb4d-295634a3a752" style="width:50%" class="column"><p id="c3beb8cf-844b-4ff4-a792-05622e94106d" class=""><strong>35.</strong>
+What were the men doing last weekend?
+(A) Conducting a tour
+(B) Training new employees
+<strong>(C) Attending a gallery opening</strong>
+(D) Designing a building</p></div><div id="b68035b2-aa49-4f98-96c5-2b26ab3fa9d8" style="width:50%" class="column"><p id="3db01718-cae8-4628-827a-30b5b061142a" class="">Những người đàn ông đã làm gì vào cuối tuần trước?
+(A) Tiến hành một chuyến tham quan
+(B) Đào tạo nhân viên mới
+(C) Tham dự buổi khai mạc phòng trưng bày
+(D) Thiết kế một tòa nhà</p></div></div><p id="d4192fc7-d7a6-480b-a938-b4794e7352f2" class=""><strong>36.</strong></p><div id="5c254cf8-a41f-43d7-b7b0-5b992e5a0aa9" class="column-list"><div id="8b6a30eb-cde0-456b-9418-9fec7452ca0a" style="width:50%" class="column"><p id="8a37239a-997e-49f1-8d0d-d930225c8d7a" class="">What type of work did the speakers do for Alfredo?
+<strong>(A) They created marketing materials.
+</strong>(B) They furnished an office space.
+(C) They revised a workflow procedure.
+(D) They made a financial investment.</p></div><div id="3aee08d2-0110-4e14-adb7-6e9da58fb8e7" style="width:50%" class="column"><p id="d401625f-f5bc-40ee-965b-3ba55f1ae082" class="">Loại công việc nào mà các diễn giả đã làm cho Alfredo?
+(A) Họ đã tạo ra các tài liệu tiếp thị.
+(B) Họ trang bị một không gian văn phòng.
+(C) Họ đã sửa đổi quy trình làm việc.
+(D) Họ đã đầu tư tài chính.</p></div></div><p id="21d0082b-a81b-42b2-b227-28e76eda76ef" class=""><strong>37.</strong></p><div id="75b282fe-a3b7-4688-90ec-6bcc6a9a65e3" class="column-list"><div id="ac635bb2-26f3-4e94-89fe-b1a128b56829" style="width:50%" class="column"><p id="321f1583-25d6-456f-b465-33e1a8acda76" class="">What does the woman plan to do in February?
+(A) Hire new staff
+(B) Relocate to another city
+(C) Attend a conference
+<strong>(D) Take a vacation</strong></p></div><div id="658c0a97-2abe-4b4f-8be4-7b44638a5904" style="width:50%" class="column"><p id="95d64f8c-0a10-4285-aabe-c28e0164ba04" class="">Người phụ nữ dự định làm gì vào tháng Hai?
+(A) Thuê nhân viên mới
+(B) Chuyển đến thành phố khác
+(C) Tham dự một hội nghị
+(D) Đi nghỉ</p></div></div><h3 id="d0e48223-8a57-4359-8e2a-d0ba8082a8c4" class=""><strong>38 - 40</strong></h3><figure id="d8268059-2740-4fa2-a7ae-d99006a5d15e"><div class="source"><a href="Test%2004%20ba93d094bf3c4e528db33b5c35b3bba4/part3-38-40.mp3">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8b33e10f-5abb-4e54-9845-184b4099d8ea/part3-38-40.mp3</a></div></figure><div id="2c838c1a-e765-4435-b597-16294e3c41ae" class="column-list"><div id="52560c69-8bf9-4446-9fcb-ab8b6e79f5fc" style="width:50%" class="column"><p id="0190e7f1-c7cf-4f63-9057-eabe4d4b5b3c" class="">Hi, I&#x27;m Petra Barlow. <mark class="highlight-red">38</mark> I have an interview for a position in the accounting department here at Houseman Incorporated. 
+Hello, Ms. Barlow. Let me check in the computer. While I do that, <mark class="highlight-red">39</mark> would you put on this visitor&#x27;s badge so it&#x27;s easy to see? 
+Yes, of course. <mark class="highlight-red">40</mark> I&#x27;m supposed to meet with Helen Wade in meeting room 2B. Is that right? 
+<mark class="highlight-red">40</mark> Actually, it looks like there was a last- minute change. You&#x27;ll be meeting in room 12A instead. It&#x27;s down that hallway and to your left. 
+Thanks a lot!</p></div><div id="c6fc77ea-cd91-4672-840c-f75726d1b455" style="width:50%" class="column"><p id="25e427c0-4819-4873-bd8c-3176415f3dac" class="">Xin chào, tôi là Petra Barlow. <mark class="highlight-red">38</mark> Tôi có một cuộc phỏng vấn cho một vị trí trong phòng kế toán tại Houseman Incorporated.
+Xin chào, cô Barlow. Để tôi kiểm tra trong máy tính. Trong khi tôi làm điều đó, <mark class="highlight-red">39</mark> bạn có thể đeo huy hiệu của vị khách này để nó dễ nhìn không?
+Vâng tất nhiên. <mark class="highlight-red">40</mark> Tôi phải gặp Helen Wade ở phòng họp 2B. Có đúng không?
+<mark class="highlight-red">40</mark> Trên thực tế, có vẻ như đã có một sự thay đổi vào phút chót. Thay vào đó, bạn sẽ gặp ở phòng 12A. Nó ở dưới hành lang đó và bên trái của bạn.
+Cảm ơn rất nhiều!</p></div></div><div id="e37e13e0-3632-4227-bfc5-90dfcef09cd9" class="column-list"><div id="4ce2b4fc-e4a0-4659-9fa0-ebe3c2398ed7" style="width:50%" class="column"><p id="1dcb1c4c-4abf-444e-a274-999bd9e54a03" class=""><strong>38</strong>
+Why is the woman at Houseman Incorporated?
+(A) To register for a class
+(B) To have a business lunch
+(C) To lead a seminar
+<strong>(D) To attend an interview</strong></p></div><div id="1c9cfa55-2700-465d-a0ca-aadca4ebecad" style="width:50%" class="column"><p id="9ed5a758-ac9c-4705-9839-818ff70d0dc1" class="">Tại sao người phụ nữ ở Houseman Incorporated?
+(A) Để đăng ký một lớp học
+(B) Để có một bữa ăn trưa kinh doanh
+(C) Để dẫn dắt một cuộc hội thảo
+(D) Để tham dự một cuộc phỏng vấn</p></div></div><div id="06322416-baf9-4f44-a4c8-25d6b26d1774" class="column-list"><div id="b5ed59ac-e600-446a-919d-416592fff253" style="width:50%" class="column"><p id="3f15aa88-c6c2-44bd-86ca-4c2c4e85d17b" class=""><strong>39</strong>
+What does the man ask the woman to do?
+(A) Wait in the lobby
+(B) Update an application.
+<strong>(C) Wear a badge
+</strong>(D) Provide photo identification</p></div><div id="eecc6ab9-37b8-44cb-834f-7a7aa4f86f90" style="width:50%" class="column"><p id="034e793c-c0de-45f5-b1ad-87645bb692f9" class="">Người đàn ông yêu cầu người phụ nữ làm gì?
+(A) Đợi ở sảnh
+(B) Cập nhật ứng dụng.
+(C) Đeo phù hiệu
+(D) Cung cấp giấy tờ tùy thân có ảnh</p></div></div><div id="c9ddfa52-0051-4907-abbc-87b0fc15fcbd" class="column-list"><div id="2618c238-33c1-44ed-b261-c98a959140f4" style="width:50%" class="column"><p id="16c51bbe-0982-4101-84ea-209a7e534e19" class=""><strong>40</strong>
+What does the man say has changed?
+<strong>(A) The location of a meeting
+</strong>(B) The date of an event
+(C) The length of a session
+(D) The number of participants</p></div><div id="e2b777cb-7792-4360-bf68-45319a37ac7b" style="width:50%" class="column"><p id="96c6fc84-9f20-4aa6-83c8-bd1c775b37ed" class="">Người đàn ông nói gì đã thay đổi?
+(A) Địa điểm của một cuộc họp
+(B) Ngày của một sự kiện
+(C) Độ dài của một phiên
+(D) Số lượng người tham gia</p></div></div><p id="6a54c294-bcb5-4349-80cf-cb1e7046bb0b" class="">41-43</p><figure id="f0acd9dd-74ff-48a1-b0bb-518187e9effc"><div class="source"><a href="Test%2004%20ba93d094bf3c4e528db33b5c35b3bba4/part3-41-43.mp3">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9e9690aa-a767-4b94-b0d6-9169ae8036b2/part3-41-43.mp3</a></div></figure><div id="d5d0c30e-7191-4cff-893c-70b65b3716d5" class="column-list"><div id="7bb51343-4dc7-46b7-b700-bba1c9b2c4d5" style="width:50%" class="column"><p id="9fe17234-bac9-4932-9ed4-5ebf2b1bbea4" class="">Good afternoon. <mark class="highlight-red">41</mark><strong> I currently subscribe to your Gold Plan satellite television package.</strong> I&#x27;d like to switch to the Platinum Plan because there are some new movie channels that I&#x27;d like to watch.
+Of course, I&#x27;d be happy to help you upgrade your subscription. <mark class="highlight-red">42</mark> <strong>Could you spell your last name for me so that I can look up your account?</strong>
+Yes, it&#x27;s K-W-A-N. When should I expect to have access to the extra channels?
+<mark class="highlight-red">43</mark> <strong>Your account will reset tomorrow at 6 A.M.,</strong> so you&#x27;ll be able to watch them first thing in the morning. I just want to remind you that an extra fifteen dollars will appear on your next monthly bill for this expanded service.</p></div><div id="1d78a558-af56-41d1-a699-706329b6eb04" style="width:50%" class="column"><p id="fcb4435e-9c70-45ba-b27f-3e12f271c389" class="">Chào buổi chiều. 41 Tôi hiện đang đăng ký gói truyền hình vệ tinh Gold Plan của bạn. Tôi muốn chuyển sang Gói bạch kim vì có một số kênh phim mới mà tôi muốn xem.
+Tất nhiên, tôi rất sẵn lòng giúp bạn nâng cấp đăng ký của mình. 42Bạn có thể đánh vần họ của bạn cho tôi để tôi có thể tra cứu tài khoản của bạn không?
+Vâng, đó là K-W-A-N. Khi nào tôi nên có quyền truy cập vào các kênh bổ sung?
+43 Tài khoản của bạn sẽ được đặt lại vào lúc 6 giờ sáng ngày mai, vì vậy bạn sẽ có thể xem chúng vào buổi sáng. Tôi chỉ muốn nhắc bạn rằng một khoản tiền thêm mười lăm đô la sẽ xuất hiện trên hóa đơn hàng tháng tiếp theo của bạn cho dịch vụ mở rộng này.</p></div></div><p id="999247cd-ce72-43e6-873a-6dfa882a1e56" class=""><strong>44-46</strong></p><p id="d39c3247-a1aa-4b77-999b-f4fb694a9a0a" class="">
+</p><figure id="31ae6551-43bf-4e1e-9a0e-4634ceaccde3"><div class="source"><a href="Test%2004%20ba93d094bf3c4e528db33b5c35b3bba4/part3-44-46.mp3">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/cc260731-667c-4552-8239-ae83c5ed17ed/part3-44-46.mp3</a></div></figure><div id="b028d1a2-872c-4544-a0d9-eedf9deacc2c" class="column-list"><div id="a03b0778-9a12-435e-8be1-43f289e5d365" style="width:50%" class="column"><p id="fb3f1100-8446-4899-8600-33502fa4d353" class="">Hi, I&#x27;ve just unloaded the last box of bathroom tiles. The whole delivery&#x27;s in your warehouse now. <mark class="highlight-red">44</mark> <strong>Would you be able to sign for them</strong>? I need a signature.
+I&#x27;m sorry; this is my first day on the job. <mark class="highlight-red">45</mark><strong> I&#x27;d better check with the warehouse manager to see if I&#x27;m allowed to do that.</strong>
+Should I wait here while you check?
+<mark class="highlight-red">46</mark> <strong>Actually, if you wouldn&#x27;t mind moving your truck, that&#x27;d be great, since we&#x27;re expecting some other deliveries shortly.</strong></p></div><div id="c45dcba5-43bc-46a4-9107-148a9cb79091" style="width:50%" class="column"><p id="fbcd6555-4432-42a9-b30f-5dd01eebd781" class="">Xin chào, tôi vừa dỡ hộp gạch lát phòng tắm cuối cùng xuống. Toàn bộ giao hàng là trong kho của bạn bây giờ. 44 Bạn có thể ký cho họ được không? Tôi cần một chữ ký.
+Tôi xin lỗi; đây là ngày đầu tiên của tôi trong công việc. 45Tôi nên kiểm tra với người quản lý kho xem liệu tôi có được phép làm điều đó không.
+Tôi có nên đợi ở đây trong khi bạn kiểm tra không?
+46 Thực ra, nếu bạn không ngại di chuyển chiếc xe tải của mình thì điều đó thật tuyệt, vì chúng tôi đang mong đợi một số chuyến giao hàng khác trong thời gian ngắn.</p></div></div><div id="3239eb8c-53be-4465-91b8-94afcfd2d14d" class="column-list"><div id="13e9eeb4-b97b-4281-972d-7677e796d98b" style="width:50%" class="column"><p id="1c1ef087-9f1c-42a3-a94a-288904574827" class="">44
+What does the woman request?
+(A) An invoice
+(B) A map
+<strong>(C) A signature
+</strong>(D) A replacement part</p></div><div id="12acf441-ba23-4112-80f4-c1e350ecd8cf" style="width:50%" class="column"><p id="3acd5daa-7c89-43ba-b908-4651e0a6c0d1" class="">44 Người phụ nữ yêu cầu gì? 
+(A) Hóa đơn 
+(B) Một bản đồ 
+(C) Một chữ ký 
+(D) Một bộ phận thay thế</p></div></div><div id="87dd61b5-0fb5-4e57-9f6c-e3fc8c0c0533" class="column-list"><div id="a3e5038b-50fc-4961-8e8c-69844cfefbe3" style="width:50%" class="column"><p id="b7da9c7d-ac95-4f02-bf55-46fa3d07bd0b" class="">45
+What does the man say he has to do?
+(A) Find his security pass
+<strong>(B) Talk with a supervisor
+</strong>(C) Unlock a door
+(D) Check inventory</p></div><div id="0eb0d6c0-1184-4a30-917a-b3d2b34b8847" style="width:50%" class="column"><p id="6529ff34-64a2-405a-85f9-3828112fcfab" class="">Người đàn ông nói anh ta phải làm gì?
+(A) Tìm thẻ bảo mật của anh ấy
+(B) Nói chuyện với người giám sát
+(C) Mở khóa cửa
+(D) Kiểm tra hàng tồn kho</p></div></div><div id="d55e3dfa-c6ef-4f3a-9ba0-8eb08574030c" class="column-list"><div id="b514e256-faa0-44db-889d-ce0a2486523f" style="width:50%" class="column"><p id="c268e59a-4188-47a5-83ec-a0ad209be07d" class="">46
+What does the man ask the woman to do?
+(A) Return later
+(B) Lower a price
+<strong>(C) Move a vehicle</strong>
+(D) Remove some boxes</p></div><div id="99bac37d-feac-46c0-8760-44271afe955a" style="width:50%" class="column"><p id="ecb5aab7-7556-46c5-aaac-0ce7e895caaa" class="">Người đàn ông yêu cầu người phụ nữ làm gì?
+(A) Quay lại sau
+(B) Giảm giá
+(C) Di chuyển một chiếc xe
+(D) Loại bỏ một số hộp</p></div></div><p id="e02f1ad7-b170-4ac8-9a15-05953e231056" class=""><strong>47-49</strong></p><figure id="7b163fce-8e57-4020-bfdf-65ec7f90ce2d"><div class="source"><a href="Test%2004%20ba93d094bf3c4e528db33b5c35b3bba4/part3-47-49.mp3">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7cb23a49-5a0c-451a-9ee1-e06c1a557f84/part3-47-49.mp3</a></div></figure><div id="654423a6-9a02-48fd-9ac7-464c4a6e2fe1" class="column-list"><div id="9fd2cdc1-1c8b-4bd6-ad7e-aa6bd8e3ae19" style="width:50%" class="column"><p id="5b2bb42e-68b9-46bd-b6ad-ac3bda284d10" class="">OK, Ms. Torres, I have your price estimate. <mark class="highlight-red">47,48</mark> <strong>To have the whole exterior of your house painted, including the fence, will cost you five thousand dollars.</strong>
+<mark class="highlight-red">48</mark> <strong>That&#x27;s quite a bit more than we expected.</strong> And actually Colgate Painting said they would do it for four thousand dollars...
+Well, <mark class="highlight-red">49</mark> <strong>the cost of paint and supplies is included in the price I quoted you</strong>, so we really offer a very good deal.
+<mark class="highlight-red">49</mark> <strong>That&#x27;s a bit of a relief</strong>. If there are no other charges, we&#x27;ll probably be able to stay within our budget.</p><p id="1dc90274-fb14-4f87-9d0e-9dbc271caaa0" class="">
+</p></div><div id="37217f54-45d9-4f23-a824-3184959f08eb" style="width:50%" class="column"><p id="20ee395a-d5e7-4e8a-a686-d1d0b4646a23" class="">OK, cô Torres, tôi có ước tính giá của cô. 47,48 Để sơn toàn bộ bên ngoài ngôi nhà của bạn, kể cả hàng rào, bạn sẽ phải trả 5.000 đô la.
+48 Đó là khá hơn một chút so với chúng tôi mong đợi. Và thực ra Colgate Painting đã nói họ sẽ làm việc đó với giá 4.000 đô la...
+Chà, 49 chi phí sơn và vật tư đã bao gồm trong giá tôi báo cho bạn, vì vậy chúng tôi thực sự đưa ra một thỏa thuận rất tốt.
+49 Đó là một chút nhẹ nhõm. Nếu không có khoản phí nào khác, chúng tôi có thể sẽ ở trong phạm vi ngân sách của mình.</p></div></div><div id="eb7270ca-3818-416b-b765-1ebdbece5c2f" class="column-list"><div id="605bd793-b4bd-46ed-be01-09c02421ea0e" style="width:50%" class="column"><p id="3356c05d-76b3-4b87-9878-c8131c083a65" class="">47 
+What are the speakers discussing?
+(A) An appliance warranty
+(B) Blueprints from a designer
+(C) A building permit
+<strong>(D) A home improvement project</strong></p></div><div id="bfd194a5-bf9e-47a0-b491-ce6c1742cf74" style="width:50%" class="column"><p id="31cef45f-626c-4bd5-8bba-f7d1b79beb53" class="">47 
+Các diễn giả đang thảo luận điều gì?
+(A) Bảo hành thiết bị
+(B) Bản thiết kế từ một nhà thiết kế
+(C) Giấy phép xây dựng
+(D) Một dự án cải tạo nhà cửa</p></div></div><div id="df851f3a-0b7e-4b77-84e6-c0a3f0484890" class="column-list"><div id="955a134c-1909-4855-ad2a-f7d478a32c34" style="width:50%" class="column"><p id="73089e83-82cc-4da5-952c-e62467d99eda" class="">48
+Why does the woman say, &quot;And actually Colgate Painting said they would do it for four thousand dollars&quot;?
+(A) To clarify a request
+<strong>(B) To negotiate a price
+</strong>(C) To offer some help
+(D) To recommend a service</p></div><div id="fa5d83ba-a495-4d11-bd1b-db7600f2435e" style="width:50%" class="column"><p id="44452e6d-f6f0-4813-ac30-8539b017a1a0" class="">48
+Tại sao người phụ nữ nói, &quot;Và thực ra Colgate Painting nói rằng họ sẽ làm việc đó với giá bốn nghìn đô la&quot;?
+(A) Để làm rõ một yêu cầu
+(B) Để thương lượng giá cả
+(C) Để đề nghị giúp đỡ
+(D) Để giới thiệu một dịch vụ</p></div></div><div id="6a63e80d-c934-4955-9abd-b548ab7cec84" class="column-list"><div id="14adc51e-964f-41e6-9e6a-a6376612aad7" style="width:50%" class="column"><p id="c555ec63-fbe4-40dc-bce3-85e084a6a4e7" class="">49
+Why is the woman relieved?
+(A) Some work will be completed on time.
+<strong>(B) A cost estimate includes supplies.
+</strong>(C) A selected item is in stock.
+(D) Experienced workers will be on-site.</p><p id="37280e5c-9764-4a83-9a41-3c54dd74d822" class="">
+</p></div><div id="390e9a05-48f2-4917-a13b-23b712f464ba" style="width:50%" class="column"><p id="92bd0651-78a5-4759-84d9-276d6bc51085" class="">49
+Tại sao người phụ nữ nhẹ nhõm?
+(A) Một số công việc sẽ được hoàn thành đúng hạn.
+(B) Ước tính chi phí bao gồm vật tư.
+(C) Một mặt hàng đã chọn có trong kho.
+(D) Công nhân có kinh nghiệm sẽ có mặt tại chỗ.</p></div></div><p id="75e5c753-947e-472b-bb80-046318029fb9" class=""><strong>50-52</strong></p><figure id="ef34c12e-d2d8-4a9d-aa92-91288b9c6e29"><div class="source"><a href="Test%2004%20ba93d094bf3c4e528db33b5c35b3bba4/part3-50-52.mp3">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c55e7009-fad0-46ea-9162-22015d2cc277/part3-50-52.mp3</a></div></figure><div id="867dffbe-4f12-484c-a71c-56ba744e315d" class="column-list"><div id="d6b0f777-3d0e-48b4-8c88-670d69f060b1" style="width:50%" class="column"><p id="9557012e-c573-4b87-8bee-d2a70b8a84e7" class=""><mark class="highlight-red">50</mark> <strong>Thabo and Michiko, I need help designing some pamphlets for our evening business courses.</strong> I&#x27;d like to have them ready before the end of April.
+Sure. Should we take a look at the ones from last year or make them different?
+<mark class="highlight-red">51</mark> <strong>You know, I think the pamphlets last year had too many details.</strong> People can get dates and times from the Web site.
+I agree. Let&#x27;s focus on the skills that people will learn in each class.
+OK. <mark class="highlight-red">52</mark><strong> I&#x27;ll come up with a rough version of the text for the pamphlet by tomorrow and e-mail it to you.</strong> Then, next week we can start working on the design.</p></div><div id="1182019b-aa05-4f6d-b8c0-4a038adeecec" style="width:50%" class="column"><p id="6c0e90eb-2391-4353-ae6f-90d5053ef6f3" class=""><mark class="highlight-red">50</mark> Thabo và Michiko, tôi cần giúp thiết kế một số tập sách nhỏ cho các khóa học kinh doanh buổi tối của chúng ta. Tôi muốn chúng sẵn sàng trước cuối tháng Tư.
+Chắc chắn. Chúng ta nên xem lại những cái từ năm ngoái hay làm cho chúng khác đi?
+H Bạn biết đấy, tôi nghĩ tờ rơi năm ngoái có quá nhiều chi tiết. Mọi người có thể lấy ngày và giờ từ trang Web.
+Tôi đồng ý. Hãy tập trung vào những kỹ năng mà mọi người sẽ học trong mỗi lớp học.
+Được rồi. <mark class="highlight-red">52</mark> Tôi sẽ đưa ra một phiên bản thô của văn bản cho cuốn sách nhỏ vào ngày mai và gửi e-mail cho bạn. Sau đó, tuần tới chúng ta có thể bắt đầu thiết kế.</p></div></div><div id="bdf93fd6-2a89-40cd-a3d3-c4ceadcf89a9" class="column-list"><div id="c942e50c-71fb-4dcf-bac1-b867ee64c8ad" style="width:50%" class="column"><p id="7b42a29c-8ad9-4724-add1-c7262353ea54" class="">51
+According to the man, what was the problem with last
+year&#x27;s pamphlets?
+(A) They were not ready on time.
+(B) They were the wrong size.
+<strong>(C) The information was too specific.</strong>
+(D) The contact number was missing.</p></div><div id="7684cd63-2429-45aa-801f-b437a7aaa8a7" style="width:50%" class="column"><p id="0f3894ad-e0ce-426d-90c5-4c30515884aa" class="">51
+Theo người đàn ông, vấn đề cuối cùng là gì
+tờ rơi của năm?
+(A) Họ đã không sẵn sàng đúng giờ.
+(B) Chúng sai kích cỡ.
+(C) Thông tin quá cụ thể.
+(D) Số liên lạc bị thiếu.</p></div></div><div id="aba673a4-1248-403f-9fcf-b5b645585ed5" class="column-list"><div id="a6468d48-e803-4298-ac67-e21e8fae409e" style="width:50%" class="column"><p id="0492c00f-ade0-43a1-bb7a-dda8f91559cb" class="">52
+What does the man say he will send the woman?
+(A) Free product samples
+(B) A list of participants
+<strong>(C) A draft of a document
+</strong>(D) A revised schedule</p></div><div id="3bcd81df-d090-4dc1-865b-b90668de04c2" style="width:50%" class="column"><p id="567a5e10-d9b5-4335-b47b-4b799d160cb8" class="">52
+Người đàn ông nói anh ta sẽ gửi gì cho người phụ nữ?
+(A) Mẫu sản phẩm miễn phí
+(B) Danh sách những người tham gia
+(C) Bản nháp của một tài liệu
+(D) Một lịch trình sửa đổi</p></div></div><h3 id="3180c0a4-3f69-4b1e-b173-aef6540600a2" class=""><strong>53-55</strong></h3><p id="f4af41b2-af39-404e-a71c-3e4848faaff0" class="">
+</p><figure id="5a978d0e-4cb7-4db6-af06-594a2ff0272b"><div class="source"><a href="Test%2004%20ba93d094bf3c4e528db33b5c35b3bba4/part3-53-55.mp3">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/69c3f600-62de-423e-9a96-f7c86c37b16f/part3-53-55.mp3</a></div></figure><div id="a4b26871-f6c3-4949-b1d5-bb8912e077fc" class="column-list"><div id="fbdb3861-001c-4450-a7b7-c1f381b29313" style="width:50%" class="column"><p id="cb080080-6d6c-4a59-82ce-6028ecb13b00" class="">Hello. <mark class="highlight-red">53</mark> <strong>I&#x27;m calling because I&#x27;d like to temporarily stop my mail delivery. </strong>I&#x27;m going to be out of town for the next two weeks.
+Certainly. We can hold your mail here at the post office for you. <mark class="highlight-red">54</mark> <strong>But you&#x27;ll need to put in your request at least a day before you leave.</strong>
+That sounds great. Do I need to come into the office and complete a form?
+No, actually, <mark class="highlight-red">55</mark> <strong>you have to submit the &quot;hold mail&quot; form on our Web site.</strong></p><p id="77b94761-cc15-4056-b5e5-0d632e6de697" class="">
+</p></div><div id="5702b5d8-bc65-4e5c-bc02-59ae01d510fc" style="width:50%" class="column"><p id="25302ef9-9f77-4a72-8987-443ebb12caf1" class="">Xin chào. 53 Tôi đang gọi vì tôi muốn tạm thời ngừng gửi thư. Tôi sẽ ra khỏi thị trấn trong hai tuần tới.
+Chắc chắn. Chúng tôi có thể giữ thư của bạn ở đây tại bưu điện cho bạn. 54 Nhưng bạn cần phải đưa ra yêu cầu ít nhất một ngày trước khi đi.
+Nghe có vẻ tuyệt vời. Tôi có cần phải đến văn phòng và điền vào một mẫu đơn không?
+Không, thực ra, 55 bạn phải gửi biểu mẫu &quot;giữ thư&quot; trên trang Web của chúng tôi.</p></div></div><div id="9e57f86b-3112-4bd7-9b9c-899864ff1876" class="column-list"><div id="63833b9f-841f-4605-b04a-c8bb00cdfd13" style="width:50%" class="column"><p id="4c5b0a34-1bb7-4a53-9088-eace4da9db1c" class="">53
+Why is the man calling?
+(A) To make plane reservations
+<strong>(B) To reschedule mail delivery
+</strong>(C) To get directions to a shop
+(D) To order some envelopes</p></div><div id="a09b4cd3-887f-4e81-a091-80c5811f7a52" style="width:50%" class="column"><p id="97daa104-d09c-4fe0-816b-b81dd7ce2632" class="">53
+Tại sao người đàn ông gọi?
+(A) Để đặt chỗ máy bay
+(B) Để lên lịch lại việc gửi thư
+(C) Để chỉ đường đến một cửa hàng
+(D) Để đặt một số phong bì</p></div></div><div id="707d99df-a986-4891-9059-5b36a8d2367f" class="column-list"><div id="7b7b538f-a951-4cb7-9589-0bad5c4db7e2" style="width:50%" class="column"><p id="bced4ea3-9e4c-4558-ada9-b46f652e3fa7" class="">54
+According to the woman, how far in advance should the man make his request?
+<strong>(A) One day
+</strong>(B) Two days
+(C) One week
+(D) Two weeks</p></div><div id="47687047-5db8-455e-a940-9059f7bf3872" style="width:50%" class="column"><p id="f20e4833-ec97-454f-8166-1ff035d71dc9" class="">54
+Theo người phụ nữ, người đàn ông nên đưa ra yêu cầu trước bao lâu?
+(A) Một ngày
+(B) Hai ngày
+(C) Một tuần
+(D) Hai tuần</p></div></div><div id="59a98d0e-be8e-454d-9304-d4e76b8c7908" class="column-list"><div id="ba8b3e75-9ac3-487c-8281-3c32e9f263c1" style="width:50%" class="column"><p id="ffd27bc4-a19d-470c-b3f4-b3a15ebb3151" class="">55
+What is the man required to do?
+(A) Pay a fee
+(B) Confirm an address
+(C) Give an account number
+(D) Submit an online form</p></div><div id="43e7e49a-d878-4006-8642-1a49acbba096" style="width:50%" class="column"><p id="224956e6-6c6e-425b-9fd7-90d1b18c2a66" class="">55
+Người đàn ông bắt buộc phải làm gì?
+(A) Trả phí
+(B) Xác nhận địa chỉ
+(C) Cung cấp số tài khoản
+(D) Gửi biểu mẫu trực tuyến</p></div></div><h3 id="79cf91c6-daaa-4020-87ec-dcb7a46f18fd" class=""><strong>56-58</strong></h3><figure id="45630779-ab71-4c2d-b5eb-97ba52413659"><div class="source"><a href="Test%2004%20ba93d094bf3c4e528db33b5c35b3bba4/part3-56-58.mp3">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/37987978-7d84-4e1a-9417-070a6321db47/part3-56-58.mp3</a></div></figure><div id="1a845675-2cde-4a82-82eb-efbb7c6066b8" class="column-list"><div id="983d2487-3608-4283-8153-ca7d9eedc725" style="width:50%" class="column"><p id="c95f7b61-1661-4130-bde2-3dd8dbfba82d" class="">Hello, Oscar-it&#x27;s Tanya from the Cardona Museum. <mark class="highlight-red">56</mark> <strong>Unfortunately our budget&#x27;s been cut</strong>, so we&#x27;ll have to delay some of the renovations we&#x27;ve asked you to do.
+Ah, that&#x27;s too bad. Do you know which parts of the project you&#x27;d like to put off?
+57 <strong>Well, I know we talked about adding a library wing on the west side of the building-but that&#x27;s very expensive. </strong><strong><mark class="highlight-red">58</mark></strong><strong> So, if we don&#x27;t make that addition, that&#x27;s all we may need to cut.</strong>
+You know, that&#x27;s not a bad idea. Let&#x27;s see how much you&#x27;d save if I take the library out of the renovation proposal. I&#x27;ll e-mail you a revised estimate this afternoon.</p></div><div id="a3f6009d-31de-4375-9944-14dbc4f36d9a" style="width:50%" class="column"><p id="4e87641a-3b6f-405c-b6ce-8ff5c8e7a0b4" class="">Xin chào, Oscar-tôi là Tanya từ Bảo tàng Cardona. 56Thật không may, ngân sách của chúng tôi bị cắt giảm, vì vậy chúng tôi sẽ phải trì hoãn một số công việc cải tạo mà chúng tôi đã yêu cầu bạn thực hiện.
+À, tệ quá. Bạn có biết phần nào của dự án mà bạn muốn trì hoãn không?
+57 Chà, tôi biết chúng ta đã nói về việc thêm một cánh thư viện ở phía tây của tòa nhà-nhưng điều đó rất tốn kém. 58 Vì vậy, nếu chúng ta không thực hiện phần bổ sung đó, đó là tất cả những gì chúng ta có thể cần cắt giảm.
+Bạn biết đấy, đó không phải là một ý tưởng tồi. Hãy xem bạn sẽ tiết kiệm được bao nhiêu nếu tôi đưa thư viện ra khỏi đề xuất cải tạo. Tôi sẽ gửi e-mail cho bạn một ước tính sửa đổi vào chiều nay.</p></div></div><div id="2c2c31c0-f11d-4531-8ef6-e390311aaf69" class="column-list"><div id="e98e70e9-4046-4422-a634-741a0fd753d5" style="width:50%" class="column"><p id="792105a7-55e0-450d-8b49-438474fd5834" class="">56
+What is the problem?
+(A) A deadline has been moved up.
+<strong>(B) Some funding has been reduced.
+</strong>(C) Some materials have not been delivered.
+(D) An architect is not available.</p></div><div id="a57aef54-b911-4676-a5c7-da04c9c5c476" style="width:50%" class="column"><p id="e56f92fb-7f76-47ce-96ef-bf181ee43c5f" class="">56
+Vấn đề là gì?
+(A) Một thời hạn đã được chuyển lên.
+(B) Một số kinh phí đã bị cắt giảm.
+(C) Một số tài liệu chưa được giao.
+(D) Không có kiến trúc sư.</p></div></div><div id="c21b4e15-6ab9-47e5-a7b2-e13a6b12407b" class="column-list"><div id="7a188544-3f44-4738-9195-6eb9497cb05b" style="width:50%" class="column"><p id="df719fc7-f924-40a5-9d53-1386ff267b31" class="">57
+Which part of the renovations will likely be postponed?
+<strong>(A) A library addition
+</strong>(B) Some roof repairs
+(C) An electrical system upgrade
+(D) Some window replacements</p></div><div id="1be65111-459d-4ce1-8229-4eb8132d067c" style="width:50%" class="column"><p id="2f0795eb-e0eb-4da1-8e26-e48f22baa9ac" class="">57
+Phần nào của việc cải tạo có thể sẽ bị hoãn lại?
+(A) Bổ sung thư viện
+(B) Một số sửa chữa mái nhà
+(C) Nâng cấp hệ thống điện
+(D) Một số cửa sổ thay thế</p></div></div><div id="c343b54b-aeed-47da-8690-432f7bc2a8ed" class="column-list"><div id="0da2e57c-fff4-4351-912f-1b1ac3ab8eca" style="width:50%" class="column"><p id="862af6dd-8b15-42bb-aaed-5602cd74b99c" class="">58
+What does the man mean when he says, &quot;That&#x27;s not a bad idea&quot;?
+(A) He would like to hear more suggestions.
+(B) He prefers the original plan.
+<strong>(C) He agrees with the proposed solution.
+</strong>(D) He has a better idea.</p></div><div id="44b424b7-d3e0-4f1a-b3c4-441b494d3f12" style="width:50%" class="column"><p id="62deb6ed-0505-4f2b-86e1-46788a120b49" class="">58
+Người đàn ông có ý gì khi nói, &quot;Đó không phải là một ý kiến tồi&quot;?
+(A) Anh ấy muốn nghe thêm lời đề nghị.
+(B) Anh ấy thích kế hoạch ban đầu hơn.
+(C) Anh ấy đồng ý với giải pháp được đề xuất.
+(D) Anh ấy có một ý tưởng hay hơn.</p></div></div><h3 id="f1067bde-b255-49a4-a76f-8bef71b0242e" class="">59-61</h3><p id="c77d9f41-0a83-48ad-ab0b-28aaff206491" class="">
+</p><figure id="05b1d812-5a34-41dc-bfe0-7ec7dedcf583"><div class="source"><a href="Test%2004%20ba93d094bf3c4e528db33b5c35b3bba4/part3-59-61.mp3">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/edd5d0b8-41c8-428a-bcf7-7467e04c034b/part3-59-61.mp3</a></div></figure><div id="24ff10b1-8156-4581-ac78-9f76a4e41678" class="column-list"><div id="f1ad64fd-e780-4a57-a8cf-b5f57326bb7c" style="width:50%" class="column"><p id="80548854-b4c7-406e-b6c8-b280b4e71e31" class="">Hi, Gabriella. <mark class="highlight-red">59,60</mark> <strong>I wanted to talk to you about using the new online time reporting system... </strong>A lot of people have been asking about it.
+Yes, well, I&#x27;ve been very busy. But I am planning the training session for early next week. That should make it quite clear to everyone.
+OK. But isn&#x27;t there any written documentation?
+What do you mean?
+You know, a guide that staff can follow in the meantime.
+I don&#x27;t think that&#x27;s necessary. <mark class="highlight-red">61</mark> <strong>I&#x27;ll have everyone go through the steps with me in the computer lab.</strong> Then they&#x27;ll know exactly what to do. It&#x27;s very simple.</p><p id="7e643c18-c938-49d4-9da8-4eaf1fb5076c" class="">
+</p></div><div id="bebe4175-7cb8-462c-9d03-1528e7a2f9f0" style="width:50%" class="column"><p id="ab8ce20c-3db8-4d40-a2fb-2173b149017f" class="">Chào, Gabriella. 59,60 Tôi muốn nói chuyện với bạn về việc sử dụng hệ thống báo cáo thời gian trực tuyến mới... Rất nhiều người đã hỏi về nó.
+Vâng, tốt, tôi đã rất bận rộn. Nhưng tôi đang lên kế hoạch cho buổi đào tạo vào đầu tuần tới. Điều đó sẽ làm cho nó khá rõ ràng cho tất cả mọi người.
+ĐƯỢC RỒI. Nhưng không có bất kỳ tài liệu bằng văn bản?
+Ý anh là gì?
+Bạn biết đấy, một hướng dẫn mà nhân viên có thể làm theo trong thời gian chờ đợi.
+Tôi không nghĩ điều đó là cần thiết. 61 Tôi sẽ để mọi người cùng tôi thực hiện các bước trong phòng máy tính. Sau đó, họ sẽ biết chính xác phải làm gì. Nó rất đơn giản.</p></div></div><div id="038ea3ac-37d8-46c7-bb6d-925f18adf19a" class="column-list"><div id="ec3fc047-2b65-45df-9ca2-b87f8209ef32" style="width:50%" class="column"><p id="4d0157ea-77e3-43fd-aff0-c3495c337b99" class="">59
+What are the speakers discussing?
+(A) Drafting a contract
+(B) Working extra hours
+<strong>(C) Using a new time reporting system
+</strong>(D) Revising a vacation policy</p></div><div id="50e6cc66-7e1f-491a-a9ee-a655a507ef4b" style="width:50%" class="column"><p id="beb5fdbd-65cb-4ca5-814a-c8b78b29cc0a" class="">59
+Các diễn giả đang thảo luận điều gì?
+(A) Soạn thảo hợp đồng
+(B) Làm thêm giờ
+(C) Sử dụng hệ thống báo cáo thời gian mới
+(D) Sửa đổi chính sách nghỉ phép</p></div></div><div id="e841ea46-fbe3-4d7f-89a5-28370734a79b" class="column-list"><div id="066cae97-8781-48ae-8c52-0b1016509258" style="width:50%" class="column"><p id="836bd26e-435f-446e-ba09-706c035735d1" class="">60
+What does the man imply when he says, &quot;A lot of people have been asking about it&quot;?
+<strong>(A) Staff are confused about a procedure.
+</strong>(B) People have heard that a workshop is interesting.
+(C) Staff are waiting for a new assignment.
+(D) A vacation calendar has not been posted yet.</p></div><div id="62806de0-b2e3-4619-b216-44d437ebae0b" style="width:50%" class="column"><p id="d050f0d8-58e5-448e-b0e4-e4c5bd8a9bda" class="">60
+Người đàn ông ngụ ý gì khi nói, &quot;Rất nhiều người đã hỏi về nó&quot;?
+(A) Nhân viên bối rối về thủ tục.
+(B) Mọi người đã nghe nói rằng một hội thảo rất thú vị.
+(C) Nhân viên đang chờ nhiệm vụ mới.
+(D) Lịch nghỉ vẫn chưa được đăng.</p></div></div><div id="63eeef4f-c863-40ca-8df4-43ebc7e17f36" class="column-list"><div id="a28ddcc2-d6ec-4871-9fb7-f74fd675e902" style="width:50%" class="column"><p id="095c1416-45e5-4e78-870c-66378bdd1525" class="">61
+What does the woman plan to do?
+<strong>(A) Lead some training
+</strong>(B) Ask for assistance
+(C) Take some time off
+(D) Author a manual</p></div><div id="83c623be-b65c-4387-97ee-538942b854b3" style="width:50%" class="column"><p id="a85bd952-a4a0-4ede-8cdb-e489b1fff053" class="">61
+Người phụ nữ định làm gì?
+(A) Dẫn dắt một số khóa đào tạo
+(B) Yêu cầu hỗ trợ
+(C) Hãy dành thời gian nghỉ ngơi
+(D) Viết sách hướng dẫn</p></div></div><h3 id="09432918-1706-4144-80c7-a519da04c77e" class="">62-64</h3><p id="22bf3c55-1e0e-43d8-bc09-4f1f3c9b4aa9" class="">
+</p><figure id="559cab48-960a-4231-a32c-cd580841c6d3"><div class="source"><a href="Test%2004%20ba93d094bf3c4e528db33b5c35b3bba4/part3-62-64.mp3">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f6cf7f68-d867-45a4-be27-f24741ae3348/part3-62-64.mp3</a></div></figure><div id="cedbef13-6695-4050-bb86-32ef8577eecb" class="column-list"><div id="cada8e61-ee29-4e0d-be7b-da52a89dd311" style="width:50%" class="column"><p id="5e8d2e4c-59c6-4b05-97b3-6ae5e69c36f8" class="">Hi. I&#x27;m going on a trip, and <mark class="highlight-red">62</mark> <strong>I&#x27;m interested in buying an electronic reader so I don&#x27;t have to carry books with me.</strong>
+Well, we carry all major brands of e-readers here I&#x27;m sure we can find the right one for you.
+Oh, good.
+Are you looking for any special features?
+It has to be user-friendly-<mark class="highlight-red">63</mark> <strong>I&#x27;m not very good with technology. </strong>I just want to read books-not watch movies or play games.
+In that case, I&#x27;d suggest this one. It&#x27;s very easy to download e-books onto it, and it holds up to three hundred books. <mark class="highlight-red">64</mark> <strong>Here, let me show you how it works.</strong></p><p id="48fd5f03-7e7d-4928-b258-e5718cf4b15c" class="">
+</p></div><div id="802ecb08-7a0a-4bad-93f7-6213c2d7d914" style="width:50%" class="column"><p id="c2fa858d-8fc8-405c-b339-be0426a9cfcd" class="">Chào. Tôi sắp đi du lịch, và 62 tôi muốn mua một thiết bị đọc sách điện tử để không phải mang theo sách bên mình.
+Chà, chúng tôi có tất cả các nhãn hiệu máy đọc sách điện tử lớn ở đây. Tôi chắc rằng chúng tôi có thể tìm được nhãn hiệu phù hợp với bạn.
+Tốt thôi.
+Bạn đang tìm kiếm bất kỳ tính năng đặc biệt?
+Nó phải thân thiện với người dùng-63 Tôi không rành lắm về công nghệ. Tôi chỉ muốn đọc sách chứ không phải xem phim hay chơi game.
+Trong trường hợp đó, tôi muốn đề xuất cái này. Rất dễ dàng để tải sách điện tử xuống đó và nó chứa tới ba trăm cuốn sách. 64 Đây, để tôi chỉ cho bạn cách nó hoạt động.</p></div></div><div id="f7a4e971-201d-4de2-9c82-d9c5aab7b6b5" class="column-list"><div id="5f31939a-105f-4e8f-b07a-ae01f7b27bf8" style="width:50%" class="column"><p id="9d37c81f-e6b3-427d-b66c-a454fc3c4b65" class="">62
+Where does the conversation most likely take place?
+<strong>(A) At an electronics store
+</strong>(B) At a public library
+(C) At a movie theater
+(D) At a travel agency</p></div><div id="3b4926f7-dc8a-43fb-90c1-12eb16919789" style="width:50%" class="column"><p id="3824013d-a91f-428f-9168-e23cdc32c606" class="">62
+Cuộc trò chuyện rất có thể diễn ra ở đâu?
+(A) Tại một cửa hàng điện tử
+(B) Tại một thư viện công cộng
+(C) Tại một rạp chiếu phim
+(D) Tại một công ty du lịch</p></div></div><div id="3d9d8345-3738-4cca-85a3-fd3e0168969b" class="column-list"><div id="0b550c21-1b41-4ec2-81c1-8897ffe2db5c" style="width:50%" class="column"><p id="9d6bdaef-57c3-45ed-9f2a-20f0cfe1e393" class="">63
+What is the man concerned about?
+(A) Repair fees
+<strong>(B) Difficult technology
+</strong>(C) Warranty terms
+(D) Screen size</p></div><div id="acbadaa4-f6d1-474a-898a-978629508cbd" style="width:50%" class="column"><p id="e7fd20ee-454f-44a8-88f4-6527693b370c" class="">63
+Người đàn ông lo lắng về điều gì?
+(A) Phí sửa chữa
+(B) Công nghệ khó
+(C) Điều khoản bảo hành
+(D) Kích thước màn hình</p></div></div><div id="cfacc0fc-09d6-4b7f-a221-cfcff3644a6b" class="column-list"><div id="afa684dd-b78f-4021-90ee-d4e3e6fd8c03" style="width:50%" class="column"><p id="9198f878-29a1-4c73-a3bc-2d98d91f9ad6" class="">64
+What does the woman offer to do?
+(A) Call a supervisor
+<strong>(B) Provide a demonstration
+</strong>(C) Exchange an item
+(D) Apply a discount</p></div><div id="35843bab-c7fd-4791-b8a7-b31ed5fc95ab" style="width:50%" class="column"><p id="eda693f2-1e8e-47f7-9e9f-cfefb55f37f5" class="">64
+Người phụ nữ đề nghị làm gì?
+(A) Gọi cho người giám sát
+(B) Cung cấp một cuộc biểu tình
+(C) Trao đổi một món đồ
+(D) Áp dụng giảm giá</p></div></div><h3 id="433e203d-5cd3-4a8c-bc18-7ac44ee45041" class="">65-67</h3><figure id="00e35487-f2c2-4f27-9371-0d8bcd66ab4d" class="image"><a href="Test%2004%20ba93d094bf3c4e528db33b5c35b3bba4/Untitled%205.png"><img style="width:262px" src="Test%2004%20ba93d094bf3c4e528db33b5c35b3bba4/Untitled%205.png"/></a></figure><figure id="70bd268b-4d81-4533-98c9-f86dc6e3c5ed"><div class="source"><a href="Test%2004%20ba93d094bf3c4e528db33b5c35b3bba4/part3-65-67.mp3">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/16db0593-1eb7-46e2-a686-b104f741a963/part3-65-67.mp3</a></div></figure><div id="0b3dd9ff-7182-482e-8f51-9100302b4983" class="column-list"><div id="3d26a534-9b28-4a15-902d-49c7c2532913" style="width:50%" class="column"><p id="32ad5c8b-f899-42e2-befb-8aded8aabfa8" class="">Hi, I&#x27;d like to have this dress cleaned. <mark class="highlight-red">65</mark><strong> I&#x27;m going to a conference at the end of this week, </strong>and I&#x27;d like to take it with me. Oh, and... can you tell me how much it&#x27;ll cost?
+Let me take a look... <mark class="highlight-red">66</mark> <strong>it&#x27;s going to be twelve dollars.</strong>
+Oh, that much? Your sign out front says dresses can be cleaned from seven dollars and up.
+Well yes, but it&#x27;s the material the dress is made of. We have to use special cleaning products to make sure we don&#x27;t damage the fabric.
+OK.
+67<strong> I can rush the service</strong> and have it to you by Wednesday evening. Does that work?</p></div><div id="fefd0e5a-86b2-4e8f-bac9-3d2719325316" style="width:50%" class="column"><p id="eb12369b-08e2-4a16-b507-1cddb61e464a" class="">Xin chào, tôi muốn giặt chiếc váy này. 65 Tôi sẽ tham dự một hội nghị vào cuối tuần này, và tôi muốn mang nó theo. Oh, và... bạn có thể cho tôi biết nó sẽ có giá bao nhiêu không?
+Để tôi xem... 66 nó sẽ là mười hai đô la.
+Ồ, nhiêu đó hả? Mặt trước đăng xuất của bạn cho biết váy có thể được làm sạch từ bảy đô la trở lên.
+Vâng, nhưng đó là chất liệu của chiếc váy. Chúng ta phải sử dụng các sản phẩm tẩy rửa đặc biệt để đảm bảo không làm hỏng vải.
+ĐƯỢC RỒI.
+67 Tôi có thể gấp rút dịch vụ và giao cho bạn vào tối thứ Tư. Điều đó có hiệu quả không?</p></div></div><div id="8fa478c2-66cf-4f62-b922-25fa0b6b748f" class="column-list"><div id="492e6d73-600d-47c6-ad82-b219ae140f94" style="width:50%" class="column"><p id="0b610129-c038-4b95-9c15-31776ad68ebd" class="">65
+What does the woman say she will do later this week?
+(A) Attend a dinner
+<strong>(B) Go to a conference
+</strong>(C) Host a celebration
+(D) Visit her family</p></div><div id="ae2ff948-9fb6-42ac-ae77-1aec2bf16795" style="width:50%" class="column"><p id="3d2e29e9-fdba-4925-a3c5-897969b38024" class="">65
+Người phụ nữ nói cô ấy sẽ làm gì vào cuối tuần này?
+(A) Tham dự một bữa ăn tối
+(B) Đi đến một hội nghị
+(C) Tổ chức một lễ kỷ niệm
+(D) Thăm gia đình cô ấy</p></div></div><div id="a46f3bac-149b-44e0-83e4-33417c3b6f27" class="column-list"><div id="ab2e0ea3-b28c-4c4b-ac35-d1d4504a1006" style="width:50%" class="column"><p id="0c339a99-bf7a-477a-a7f3-521fd3a924dd" class="">66
+Look at the graphic. What is the dress made of?
+(A) Cotton
+(B) Wool
+(C) Mixed synthetics
+<strong>(D) Silk</strong></p></div><div id="abd57263-2cda-43b0-a809-080c1a6f1cb7" style="width:50%" class="column"><p id="070d5a64-4fe9-416b-8d8e-47d5d589f669" class="">66
+Nhìn vào đồ họa. Chiếc váy được làm bằng gì?
+(A) Bông
+(B) Len
+(C) Hỗn hợp tổng hợp
+(D) Lụa</p></div></div><div id="af22f5c9-006b-4918-8919-c1f42967911d" class="column-list"><div id="b57abd31-0830-4f12-bd84-36ec14709896" style="width:50%" class="column"><p id="6847b18b-4a42-4684-bafc-f9614fb2c2bc" class="">67
+What does the man say he will do?
+(A) Print a receipt
+<strong>(B) Expedite a service
+</strong>(C) Send a confirmation
+(D) Schedule an appointment</p></div><div id="7d0cf9f9-d935-48dc-9ea9-037a0b4cea69" style="width:50%" class="column"><p id="e12214b4-9a49-4aac-9e4d-47069688aca1" class="">67
+Người đàn ông nói anh ta sẽ làm gì?
+(A) In biên lai
+(B) Xúc tiến một dịch vụ
+(C) Gửi xác nhận
+(D) Đặt lịch hẹn</p></div></div><h3 id="73ae7315-6b65-4826-8249-8d57935259b8" class="">68-70</h3><figure id="00fe1f4e-34d5-4dbb-bad7-18bf747d9185" class="image"><a href="Test%2004%20ba93d094bf3c4e528db33b5c35b3bba4/Untitled%206.png"><img style="width:391px" src="Test%2004%20ba93d094bf3c4e528db33b5c35b3bba4/Untitled%206.png"/></a></figure><figure id="f890d627-c23e-48ca-b350-da888858fb76"><div class="source"><a href="Test%2004%20ba93d094bf3c4e528db33b5c35b3bba4/part3-68-70.mp3">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1d21c1d1-5a9c-455b-bb09-0c0b9e78dde8/part3-68-70.mp3</a></div></figure><div id="e4f27024-b189-40db-9c5c-9f85ad4ed840" class="column-list"><div id="46f77281-0f8f-46db-8552-071df508686e" style="width:50%" class="column"><p id="0bf08c8a-1feb-4cf5-ae64-12b2d6492c7d" class="">Hi, Jim. I hear you&#x27;re going to the jazz concert on Friday. Can I ask you a favor?
+Sure, what do you need?
+A few of us from the graphics department are also attending the concert, but we have a meeting until six o&#x27;clock on Friday. Since there are no assigned seats, <mark class="highlight-red">68</mark> <strong>we were wondering if you could save a few places for us.</strong>
+That shouldn&#x27;t be a problem. I don&#x27;t have any meetings on Friday afternoon, so <mark class="highlight-red">69</mark> <strong>I plan to get there when the doors open. </strong>How many should I reserve?
+Hmm... I&#x27;m not sure yet if Eduardo is joining us. <mark class="highlight-red">70</mark> <strong>Why don&#x27;t I send him an e-mail right now, </strong>and I&#x27;ll let you know how many seats to save.</p><p id="58edb024-8b5b-42ed-9181-a8815d396980" class="">
+</p></div><div id="b385c7c5-20ce-4bc2-b161-126fccf491ff" style="width:50%" class="column"><p id="81ba677e-9331-4ba2-8728-ad2f27d6f7ca" class="">Chào Jim. Tôi nghe nói bạn sẽ đến buổi hòa nhạc jazz vào thứ Sáu. Bạn có thể giúp mình tí được không?
+Tất nhiên bạn cần gì?
+Một vài người trong chúng tôi từ bộ phận đồ họa cũng tham dự buổi hòa nhạc, nhưng chúng tôi có cuộc họp đến sáu giờ ngày thứ sáu. Vì không có chỗ ngồi được chỉ định, 68 chúng tôi tự hỏi liệu bạn có thể dành một vài chỗ cho chúng tôi không.
+Đó không phải là một vấn đề. Tôi không có cuộc họp nào vào chiều thứ Sáu, vì vậy 69 tôi định đến đó khi cửa mở. Tôi nên dự trữ bao nhiêu?
+Hmm... Tôi vẫn chưa chắc liệu Eduardo có tham gia cùng chúng tôi hay không. 70 Tại sao tôi không gửi e-mail cho anh ấy ngay bây giờ, và tôi sẽ cho bạn biết cần tiết kiệm bao nhiêu chỗ.</p></div></div><div id="cb2afdf7-bc3d-4e0a-9b88-c1c59f8b024c" class="column-list"><div id="1c3431f1-a725-438b-8b23-812f3eb52143" style="width:50%" class="column"><p id="e78c5138-7855-4b61-9697-940855c12d04" class="">68
+What does the woman ask the man to do?
+(A) Record a performance
+<strong>(B) Save some seats
+</strong>(C) Check the time of a meeting
+(D) Arrange for transportation</p><p id="6e63516d-27ae-4a07-a301-afb3cc781468" class="">
+</p></div><div id="d2d11352-f48e-454f-85ba-1e0fc9b9baad" style="width:50%" class="column"><p id="808af8c7-fb9d-41a2-b1c0-91b59b0bbd8f" class="">68
+Người phụ nữ yêu cầu người đàn ông làm gì?
+(A) Ghi lại một buổi biểu diễn
+(B) Tiết kiệm một số chỗ ngồi
+(C) Kiểm tra thời gian của một cuộc họp
+(D) Sắp xếp phương tiện đi lại</p></div></div><div id="bc7f001c-1f5d-4f2b-b09e-bd5c0eadd585" class="column-list"><div id="c540da78-ef8c-4068-98c4-41493b5fb8d1" style="width:50%" class="column"><p id="1eaae6cc-65f6-4dc7-9bcb-361ec9b5935e" class="">69
+Look at the graphic. When does the man plan to arrive at
+the concert hall?
+<strong>(A) At 5:30 P.M.
+</strong>(B) At 6:00 PM.
+(C) At 6:30 PM.
+(D) At 7:00 PM.</p></div><div id="5940fa4d-b00f-4d43-b375-84f6b4f2ca9b" style="width:50%" class="column"><p id="57524e86-8b55-4442-ad2e-1911f4eaf8a2" class="">69
+Nhìn vào đồ họa. Khi nào người đàn ông dự định đến
+phòng hòa nhạc?
+(A) Lúc 5:30 chiều.
+(B) Lúc 6 giờ chiều.
+(C) Lúc 6:30 chiều.
+(D) Lúc 7 giờ tối.</p></div></div><div id="1e236f7a-828d-4597-ae2d-b252ac200e66" class="column-list"><div id="35b2c80e-5595-402f-9679-4c48ed99f7b5" style="width:50%" class="column"><p id="610b3dff-9ef6-4896-9e67-8809c90c2ca6" class="">70
+What will the woman do next?
+(A) Print a confirmation
+<strong>(B) Send an e-mail
+</strong>(C) Approve a purchase
+(D) Request contact information</p></div><div id="9d5b2d53-bbbd-4afb-b1ce-3e7e4add73bb" style="width:50%" class="column"><p id="fefee60a-95b4-4c19-819a-4508b0f4fc49" class="">70
+Người phụ nữ sẽ làm gì tiếp theo?
+(A) In xác nhận
+(B) Gửi e-mail
+(C) Phê duyệt mua hàng
+(D) Yêu cầu thông tin liên lạc</p></div></div><h2 id="d031f3ea-2fca-41d5-a1e0-3282da4e1526" class="">Part 4</h2><h3 id="3948a186-bc5f-4591-bb5b-199f5af129c4" class="">71-73</h3><figure id="fc932931-2922-46fc-9f34-97a35c7cb351"><div class="source"><a href="Test%2004%20ba93d094bf3c4e528db33b5c35b3bba4/Part4-71-73.mp3">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f78159df-d46e-4a5a-a583-5d09c77158b9/Part4-71-73.mp3</a></div></figure><p id="c049fbfd-251c-42ad-ae7d-5ebcc1af02e6" class="">
+</p><div id="ca9efdd0-1e37-4952-8181-306d55b8e537" class="column-list"><div id="21803efd-76a1-40db-ae43-a6d3107fa14c" style="width:50%" class="column"><p id="53ec4018-ce70-4750-ad75-5e02e8884ad4" class="">Hello, this is Sylvia Chen. I recently purchased a camera from your online shop. 71 Unfortunately, when the camera arrived, the lens was scratched. 72 I want to bring it to the post office this afternoon to return it for an exchange, but I&#x27;d like to speak to someone from your company before I mail it. You see, I&#x27;m moving to a new house next week, so the replacement will have to be shipped to my new address. 73 Please call me back so I can be sure your shipping department will send the camera. to the correct address.</p></div><div id="aaf2ff83-7c22-48a7-80bd-a90eba7e2ed4" style="width:50%" class="column"><p id="c868a8d2-c1f7-425c-8ad6-184b30d72a7e" class="">Xin chào, đây là Sylvia Chen. Gần đây tôi đã mua một máy ảnh từ cửa hàng trực tuyến của bạn. 71 Thật không may, khi máy ảnh đến, ống kính đã bị trầy xước. 72 Chiều nay tôi muốn mang nó đến bưu điện để đổi lại, nhưng tôi muốn nói chuyện với một người từ công ty của bạn trước khi tôi gửi nó. Bạn thấy đấy, tôi sẽ chuyển đến một ngôi nhà mới vào tuần tới, vì vậy đồ thay thế sẽ phải được chuyển đến địa chỉ mới của tôi. 73 Vui lòng gọi lại cho tôi để tôi có thể chắc chắn rằng bộ phận vận chuyển của bạn sẽ gửi máy ảnh. đến đúng địa chỉ.</p></div></div><div id="2a0bce7b-ca59-41ff-9de8-6c271416726c" class="column-list"><div id="79dd1cec-7d94-44f3-8445-c21d9120c77f" style="width:50%" class="column"><p id="c18d0652-ed31-4a62-992d-35d5046b7555" class="">71
+What is wrong with the camera?
+(A) It is missing a part.
+(B) It is an older model.
+(C) It is too heavy.
+<strong>(D) It is damaged.</strong></p></div><div id="dccc7387-7e2c-4e36-81f8-4981d279774a" style="width:50%" class="column"><p id="62e5afdb-a735-49ce-bb10-9ec8e5d7930e" class="">71
+Có gì sai với máy ảnh?
+(A) Nó bị thiếu một phần.
+(B) Nó là một mô hình cũ hơn.
+(C) Nó quá nặng.
+(D) Nó bị hỏng.</p></div></div><div id="8e9ee145-98d8-41e1-a453-f6f4f3d00af4" class="column-list"><div id="9a9a19b2-8fad-40c5-9698-c021f0f9a908" style="width:50%" class="column"><p id="f2583ef6-83b1-42c1-b99f-88d4256c954d" class="">72
+Where does the speaker want to go this afternoon?
+(A) To a real estate agency
+(B) To a camera store
+<strong>(C) To a post office
+</strong>(D) To a warehouse</p></div><div id="28ef64f9-dfb1-4d3b-99e0-251206635a71" style="width:50%" class="column"><p id="c02f242d-03bb-4414-8232-7619f71a8e99" class="">72
+Chiều nay người nói muốn đi đâu?
+(A) Đến một cơ quan bất động sản
+(B) Đến một cửa hàng máy ảnh
+(C) Đến một bưu điện
+(D) Đến một nhà kho</p></div></div><div id="6add0f72-6dc0-465d-ac41-756133d97d23" class="column-list"><div id="b6a189ae-c60a-4994-a6c6-8bef907c41a4" style="width:50%" class="column"><p id="63c1bd08-7f10-4ad7-9bed-d3d98427f82e" class="">73
+Why does the speaker request a return call?
+(A) To change an order
+(B) To arrange a rental
+<strong>(C) To confirm an address
+</strong>(D) To get driving directions</p><p id="05c348e5-b813-467e-9f39-f50b680c63ab" class="">
+</p></div><div id="f52d0f80-e10e-4e79-b254-9bfaf28977ba" style="width:50%" class="column"><p id="834fcdb2-16dd-48bf-8b22-c3a98b223f15" class="">73
+Tại sao người nói yêu cầu một cuộc gọi trở lại?
+(A) Để thay đổi một đơn đặt hàng
+(B) Để thu xếp việc thuê nhà
+(C) Để xác nhận một địa chỉ
+(D) Để nhận chỉ đường lái xe</p></div></div><h3 id="f4ae51c4-30c0-47ec-8b7f-04f3636b3cbc" class="">74-76</h3><p id="5f62efb1-da65-41f8-b671-65b4d3f8dcf8" class="">
+</p><figure id="209472c6-4c8e-49b9-a1b4-c7e6e389a1ae"><div class="source"><a href="Test%2004%20ba93d094bf3c4e528db33b5c35b3bba4/Part4-74-76.mp3">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/72f7c4e2-19dc-490f-b26b-98493e00fd94/Part4-74-76.mp3</a></div></figure><div id="468d5f8f-592d-4455-a041-e25e8f55e78a" class="column-list"><div id="a3699819-7442-48b4-acf9-b78ab4380d40" style="width:50%" class="column"><p id="f007f188-c1c5-472a-8011-a17c228df973" class="">Now, turning to local news, <mark class="highlight-red">74</mark> <strong>the annual Art Walk festival will be held this Saturday. </strong>The festival offers residents the chance to discover local art galleries and to talk with gallery owners and artists. <mark class="highlight-red">75</mark> <strong>The walk starts at the Clareton City Hall,</strong> where you&#x27;ll receive a map showing all the participating galleries. And this year, for the first time, food from local restaurants will be available at each gallery. 76 <strong>Information about parking for the event can be found on the city&#x27;s Web site.</strong></p><p id="94d12814-d15e-49c9-b48e-2a142045da40" class="">
+</p></div><div id="2916f8b0-ac5f-40d2-9858-84d255f0278f" style="width:50%" class="column"><p id="62fab1fb-09c2-4728-9e0f-decd4a5f4628" class="">Bây giờ, chuyển sang tin tức địa phương, 74 lễ hội Art Walk hàng năm sẽ được tổ chức vào thứ Bảy tuần này. Lễ hội mang đến cho cư dân cơ hội khám phá các phòng trưng bày nghệ thuật địa phương và trò chuyện với các chủ phòng trưng bày và nghệ sĩ. 75 Cuộc đi bộ bắt đầu tại Tòa thị chính Clareton, nơi bạn sẽ nhận được một bản đồ hiển thị tất cả các phòng trưng bày tham gia. Và năm nay, lần đầu tiên, đồ ăn từ các nhà hàng địa phương sẽ có mặt tại mỗi phòng trưng bày. 76 Thông tin về bãi đậu xe cho sự kiện có thể được tìm thấy trên trang Web của thành phố.</p></div></div><div id="136846b5-fb29-4839-b5d1-a48c25ce71d3" class="column-list"><div id="b0425cda-0c0d-4d0c-87d8-f0a8fabff090" style="width:50%" class="column"><p id="4dbb8bf2-6b7c-4176-a4f2-008eb25283db" class="">74
+What is happening this weekend?
+(A) A marathon
+<strong>(B) An art festival
+</strong>(C) A music concert
+(D) A community picnic</p></div><div id="d9d19c2f-9fd3-49da-8ccb-a50fa27b47b0" style="width:50%" class="column"><p id="b1b3c827-f719-4b6e-bc40-4014b6ea0225" class="">74
+Điều gì đang xảy ra vào cuối tuần này?
+(A) Một cuộc chạy marathon
+(B) Một lễ hội nghệ thuật
+(C) Một buổi hòa nhạc
+(D) Một buổi dã ngoại cộng đồng</p></div></div><div id="45b85923-7fb3-490f-9409-5c51308a1c9b" class="column-list"><div id="4f6b0f4b-a172-40c7-b3a8-cf5e29789278" style="width:50%" class="column"><p id="d03f69fe-2866-4a45-b92c-04401cb821ce" class="">75
+Where are listeners instructed to go first?
+(A) To a ticket booth
+(B) To a stadium
+<strong>(C) To a city hall
+</strong>(D) To a county park</p></div><div id="7c039c20-34c8-40cc-92bd-287442b1d842" style="width:50%" class="column"><p id="af7a51b2-05fe-4071-aed9-5a75c370909e" class="">75
+Người nghe được hướng dẫn đi đâu trước?
+(A) Đến quầy bán vé
+(B) Đến một sân vận động
+(C) Đến tòa thị chính
+(D) Đến một công viên quận</p></div></div><div id="e4d77ca5-574a-417b-b366-f6ff8ccb7c5e" class="column-list"><div id="34339f5b-edd9-46cf-aa3c-8fad64ba97ea" style="width:50%" class="column"><p id="7f8a6804-18dc-4b52-93fc-663e70f947f5" class="">76
+What details can be found on the city&#x27;s Web site?
+<strong>(A) Parking information
+</strong>(B) Rain dates
+(C) A map of the city
+(D) A list of musicians</p></div><div id="1bc42fbd-04e0-44d4-a5b2-b32b6e492de1" style="width:50%" class="column"><p id="7a59fb39-3707-4463-a779-4d8aa8f205a3" class="">76
+Những chi tiết có thể được tìm thấy trên trang web của thành phố?
+(A) Thông tin bãi đậu xe
+(B) Ngày mưa
+(C) Bản đồ thành phố
+(D) Một danh sách các nhạc sĩ</p></div></div><h3 id="f8bcc1d5-10bc-49a5-9ef0-406ceebb2f16" class="">77-79</h3><figure id="d7d7db5c-f53a-4549-87ba-475b6bd53e3b"><div class="source"><a href="Test%2004%20ba93d094bf3c4e528db33b5c35b3bba4/Part4-77-79.mp3">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7395beeb-94e7-4de4-8aec-9bef5b8f6384/Part4-77-79.mp3</a></div></figure><div id="abb09f2d-ff4c-42b9-9ac2-1343198d83dd" class="column-list"><div id="dce9467b-a19b-4d22-be97-e2af867310d0" style="width:50%" class="column"><p id="0e13c8fb-7970-4ade-85e8-2666e22d0247" class=""><mark class="highlight-red">77</mark> <strong>Hello Alborada Apartments residents. </strong>Thank you for letting me speak at tonight&#x27;s tenant meeting. My name is Jay, and I&#x27;m the new maintenance manager for the complex. <mark class="highlight-red">78</mark> <strong>In my first few days as maintenance manager, I&#x27;ve realized that many of you are having problems with the air conditioning in your apartments.</strong> So my crew and I will be coming around to each apartment over the next three weeks to inspect all the air conditioning units and decide which ones need to be replaced. The good news is, the pool will be opening for the summer next week. <mark class="highlight-red">79</mark> <strong>Don&#x27;t forget to collect your pool passes from the main office on Monday.</strong></p><p id="372ab3fc-81d3-416f-8273-5548b38acf5b" class="">
+</p></div><div id="453f0844-6c9d-4fba-b50d-dffa32d360c8" style="width:50%" class="column"><p id="d9813fb8-6aa9-45db-aa52-caf136dc2467" class="">77 Xin chào cư dân Khu căn hộ Alborada. Cảm ơn bạn đã cho tôi phát biểu tại cuộc họp người thuê nhà tối nay. Tên tôi là Jay, và tôi là người quản lý bảo trì mới cho khu phức hợp. 78 Trong vài ngày đầu tiên làm giám đốc bảo trì, tôi nhận thấy rằng nhiều người trong số các bạn đang gặp vấn đề với máy điều hòa không khí trong căn hộ của mình. Vì vậy, nhóm của tôi và tôi sẽ đến từng căn hộ trong vòng ba tuần tới để kiểm tra tất cả các thiết bị điều hòa không khí và quyết định xem thiết bị nào cần được thay thế. Tin vui là bể bơi sẽ mở cửa vào mùa hè vào tuần tới. 79 Đừng quên nhận thẻ bơi từ văn phòng chính vào thứ Hai.</p></div></div><div id="a03c9cc2-18b5-4c41-90ca-5119cd705303" class="column-list"><div id="f10ddc8b-a93b-4d1e-af42-dc772f42d1ca" style="width:50%" class="column"><p id="eedc23ed-406b-4374-b75f-bfb1088c37bd" class="">77
+Who is the audience for the talk?
+(A) Hotel guests
+(B) Maintenance staff
+<strong>(C) Apartment residents
+</strong>(D) Garden club members</p></div><div id="46421bc7-25c0-4ff9-8ca2-2bacf619d3ff" style="width:50%" class="column"><p id="195d500c-68b5-4fbd-9012-67ca30b9e217" class="">77
+Đối tượng của buổi nói chuyện là ai?
+(A) Khách của khách sạn
+(B) Nhân viên bảo trì
+(C) Cư dân chung cư
+(D) Thành viên câu lạc bộ làm vườn</p></div></div><div id="268a86d3-8298-480a-afbf-bdaacfe9513d" class="column-list"><div id="d0c2de81-d6a6-4bd6-836a-fa11f1895248" style="width:50%" class="column"><p id="8a034a09-bf75-4b81-8108-2615e538739d" class="">78
+What problem does the speaker mention?
+(A) The pool needs to be painted.
+(B) A reservation has been lost.
+<strong>(C) Some air conditioners are not working.
+</strong>(D) The hotel restaurant is closed.</p></div><div id="43daa108-69d3-4c02-b76f-20a7d6f06f8e" style="width:50%" class="column"><p id="512a1845-4c19-4d39-ad68-38da2ebd4da7" class="">78
+Người nói đề cập đến vấn đề gì?
+(A) Hồ bơi cần được sơn lại.
+(B) Một đặt phòng đã bị mất.
+(C) Một số máy điều hòa không hoạt động.
+(D) Nhà hàng của khách sạn đã đóng cửa.</p></div></div><div id="15d4b03a-03c5-43e8-b9e9-8a70aff746d8" class="column-list"><div id="c1c14dc6-3765-4a31-992d-b89eb406dd87" style="width:50%" class="column"><p id="ba3fd642-30c5-4787-a2dc-ed1c9b900494" class="">79
+What does the speaker remind listeners to do on Monday?
+(A) Check out on time
+(B) Sign a new lease
+(C) Make minor repairs
+<strong>(D) Pick up passes</strong></p></div><div id="b0b01963-c4cf-45c0-a22e-1ffa91119533" style="width:50%" class="column"><p id="8bf27b60-1b96-418c-8b52-64a47090d10d" class="">79
+Diễn giả nhắc người nghe làm gì vào thứ Hai?
+(A) Trả phòng đúng giờ
+(B) Ký hợp đồng thuê mới
+(C) Sửa chữa nhỏ
+(D) Nhận thẻ</p></div></div><h3 id="02016ac2-2603-4942-a911-a217d7ec447f" class="">80-82</h3><p id="400a961f-63eb-4d60-acbc-5cff880c36db" class="">
+</p><figure id="c3bf9e20-68dc-432f-98e7-46c662ae6da0"><div class="source"><a href="Test%2004%20ba93d094bf3c4e528db33b5c35b3bba4/Part4-80-82.mp3">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4157796d-0828-4f3b-8121-6933a625a7da/Part4-80-82.mp3</a></div></figure><div id="963c4531-4e92-4575-993f-26c0a6019230" class="column-list"><div id="f2c96744-0ee7-42cc-82cb-5c7657cc044a" style="width:50%" class="column"><p id="beeaf74f-70b1-4864-9dad-f9ea1716070b" class="">Hi, everyone. Today we have some urgent business to attend to. I just received word that <mark class="highlight-red">81</mark> <strong>Moon-Hee Lee will be making a visit to our store tomorrow.</strong> For those of you who don&#x27;t know, <mark class="highlight-red">80</mark> <strong>Ms. Lee is our regional manager,</strong> who oversees five stores in the area including this one. Now, it&#x27;s very important that we give her a good impression, so <mark class="highlight-red">81</mark> <strong>I&#x27;m requesting that everyone stay a bit late today to help get the store cleaned and organized. </strong>And, <mark class="highlight-red">82</mark> <strong>since you&#x27;ll be working extra hours today, you can each select a morning to take off next week. </strong>Just let me know which day you choose to come in later, so I can update the schedule.</p></div><div id="bbb4221c-d407-4c03-a506-7629fedae8c2" style="width:50%" class="column"><p id="095fde46-6710-4ba6-b5ab-96ae5a6f17e5" class="">Chào mọi người. Hôm nay chúng tôi có một số công việc khẩn cấp phải tham dự. Tôi vừa nhận được tin rằng 81 Moon-Hee Lee sẽ đến thăm cửa hàng của chúng tôi vào ngày mai. Đối với những người bạn chưa biết, 80 Bà Lee là quản lý khu vực của chúng tôi, người giám sát năm cửa hàng trong khu vực bao gồm cả cửa hàng này. Bây giờ, điều rất quan trọng là chúng ta phải tạo ấn tượng tốt với cô ấy, vì vậy 81 tôi yêu cầu mọi người hôm nay ở lại muộn một chút để giúp dọn dẹp và sắp xếp cửa hàng. Và, 82 vì hôm nay bạn sẽ làm thêm giờ nên mỗi bạn có thể chọn một buổi sáng để nghỉ vào tuần tới. Chỉ cần cho tôi biết ngày nào bạn chọn đến sau, để tôi có thể cập nhật lịch trình.</p></div></div><div id="2ae173d0-08e3-4518-8097-554bf16c07ac" class="column-list"><div id="b67dc49a-c6d1-434d-835f-3b1316748f7e" style="width:50%" class="column"><p id="0ff7c856-0013-4ff0-8155-b6c495e34baa" class="">80
+Who is Moon-Hee Lee?
+<strong>(A) A regional manager
+</strong>(B) A new employee
+(C) A health inspector
+(D) A prospective client</p></div><div id="6506ef20-c303-4a68-a4ac-7d94b81b3647" style="width:50%" class="column"><p id="d86bbf98-de2c-424a-b0f8-159d90326b47" class="">80
+Moon Hee Lee là ai?
+(A) Một người quản lý khu vực
+(B) Một nhân viên mới
+(C) Một thanh tra y tế
+(D) Một khách hàng tiềm năng</p></div></div><div id="e3b05385-3bb7-4b3a-809c-c0728a257cb0" class="column-list"><div id="0e7e56e3-e9dd-4b9e-9667-36281df2a38f" style="width:50%" class="column"><p id="25c7ca46-5f18-4d95-bd5c-fb45317a0dfa" class="">81
+Why does the speaker ask listeners to stay late?
+(A) To process a large order
+(B) To wait for a shipment to arrive
+(C) To attend a workshop
+<strong>(D) To prepare the store for a visit</strong></p></div><div id="c9967340-68e5-47ef-9846-70a7bb342869" style="width:50%" class="column"><p id="98565bdd-1184-4c3e-9a42-d65f08d9f11c" class="">81
+Tại sao người nói yêu cầu người nghe ở lại muộn?
+(A) Để xử lý một đơn đặt hàng lớn
+(B) Để đợi một lô hàng đến
+(C) Để tham dự một hội thảo
+(D) Để chuẩn bị cho chuyến thăm cửa hàng</p></div></div><div id="7d029f7e-1a4a-404b-83ef-b53b70b77284" class="column-list"><div id="03555938-6ae3-4cbe-aee7-e76007347184" style="width:50%" class="column"><p id="cc9ddc10-0ff9-4eb3-bf53-79d145568f31" class="">82
+What does the speaker offer the listeners?
+(A) A company dinner
+(B) A cash bonus
+<strong>(C) Some time off
+</strong>(D) Some merchandise</p></div><div id="5e821904-9a53-45f3-849d-38d166661216" style="width:50%" class="column"><p id="2840f943-3630-4ca6-b38f-e13a870b62c5" class="">82
+Người nói cung cấp cho người nghe những gì?
+(A) Bữa tối của công ty
+(B) Tiền thưởng bằng tiền mặt
+(C) Một thời gian nghỉ
+(D) Một số hàng hóa</p></div></div><h3 id="370e9e9f-a051-4b0c-aa66-29a1fa7903eb" class="">83-85</h3><p id="23d29039-6b21-4d11-9018-c04219dafe29" class="">
+</p><figure id="eb13c01a-f1a1-401c-866d-6680d02e9922"><div class="source"><a href="Test%2004%20ba93d094bf3c4e528db33b5c35b3bba4/Part4-83-85.mp3">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/33846cf7-aa4c-4fba-932a-55d2c5c98cf5/Part4-83-85.mp3</a></div></figure><div id="69376467-e118-492a-a063-af3855b0da95" class="column-list"><div id="931eca40-2a6d-4477-8785-1f8fd38d76d7" style="width:50%" class="column"><p id="06a41996-c1d8-48b2-ae78-3ddf7d23ac9f" class="">This is Scott Durlin, and <mark class="highlight-red">83</mark> <strong>you&#x27;re listening to Scott&#x27;s Money Advice on WYBR Radio Ninety-One, where we discuss how to handle all types of money and home-budget topics.</strong> I want to let listeners know, that <mark class="highlight-red">84</mark> <strong>as of today, you can download audio files of past broadcasts of our show from my newly updated Web site, www.</strong><strong><a href="http://scottsadvice.com/">scottsadvice.com</a></strong><strong>.</strong> This is in addition to the usual links and interactive features on topics from the show. And I always like to hear from you, <mark class="highlight-red">85</mark> <strong>so please e-mail me any money questions you might have. </strong>I&#x27;ll be sure to answer them on the air. Now let&#x27;s return to our discussion of what to do when buying a car, with our guest, Nina Robinson.</p><p id="e5d4b881-f553-4f53-96c5-fa131fb73940" class="">
+</p></div><div id="2d2589f8-1d4a-4c89-a65c-f7b06e8441c1" style="width:50%" class="column"><p id="32c3beb0-9835-48ad-ba7e-f7cf635c96ea" class="">Đây là Scott Durlin, và 83 bạn đang nghe Scott&#x27;s Money Advice trên WYBR Radio Ninety-One, nơi chúng ta thảo luận cách xử lý tất cả các loại tiền và các chủ đề về ngân sách gia đình. Tôi muốn cho thính giả biết rằng 84 kể từ hôm nay, bạn có thể tải xuống các tệp âm thanh của các chương trình phát sóng trước đây của chúng tôi từ trang web mới cập nhật của tôi, www. <a href="http://scottsadvice.com/">scottsadvice.com</a>. Điều này bổ sung cho các liên kết thông thường và các tính năng tương tác về các chủ đề từ chương trình. Và tôi luôn muốn nghe ý kiến từ bạn, 85 vì vậy hãy gửi e-mail cho tôi bất kỳ câu hỏi nào về tiền bạc mà bạn có thể có. Tôi chắc chắn sẽ trả lời chúng trên sóng. Bây giờ chúng ta hãy quay lại cuộc thảo luận của chúng ta về những việc cần làm khi mua một chiếc ô tô, với vị khách của chúng ta, Nina Robinson.</p></div></div><div id="21efb1bb-90e1-459d-955b-ffac7f3320da" class="column-list"><div id="81fdd4a6-ec61-479e-a03d-59d4581ffbe4" style="width:50%" class="column"><p id="9640eabc-7f3c-4414-8245-149b0510bcf8" class="">83
+What is the main topic of the radio show?
+<strong>(A) Financial planning
+</strong>(B) Web site design
+(C) Interior decorating
+(D) Car repairs</p></div><div id="489c2f0e-5a0f-4906-bd74-e2bbbc479c5d" style="width:50%" class="column"><p id="b2c59e59-d508-470c-b414-7555d81c2a19" class="">83
+Chủ đề chính của chương trình radio là gì?
+(A) Lập kế hoạch tài chính
+(B) Thiết kế trang web
+(C) Trang trí nội thất
+(D) Sửa chữa ô tô</p></div></div><div id="2cbe9d58-fb50-44d8-a5e2-1fc60d7ad4e5" class="column-list"><div id="526f0f63-0e82-43c8-8670-6cea38b17145" style="width:50%" class="column"><p id="a2d89781-0b1a-482e-acb9-a34db7b0da95" class="">84
+What has recently become available online?
+(A) Step-by-step instructions
+<strong>(B) Audio recordings
+</strong>(C) Product reviews
+(D) Free estimates</p></div><div id="45f8fd32-d30b-4397-aaca-86ff540dc8c2" style="width:50%" class="column"><p id="cdb268d4-e64d-4476-8e46-d472e86cf34d" class="">84
+Những gì gần đây đã trở nên có sẵn trực tuyến?
+(A) Hướng dẫn từng bước
+(B) Bản ghi âm
+(C) Đánh giá sản phẩm
+(D) Ước tính miễn phí</p></div></div><div id="e555a818-6ccc-47e4-ae84-19032d500382" class="column-list"><div id="a357f731-7801-430a-9a10-84164a6e2af9" style="width:50%" class="column"><p id="a5dcf020-baf3-414f-8d70-84a3cbf05679" class="">85
+Why does the speaker say, &quot;And I always like to hear from you&quot;?
+(A) To arrange for a guest speaker
+(B) To ask for technical help
+(C) To thank his audience for their interest
+<strong>(D) To encourage listeners to contact him</strong></p></div><div id="18c9c5d6-e9de-4392-8f09-e4e785a9c466" style="width:50%" class="column"><p id="34244138-2078-4c25-a366-e634db41244d" class="">85
+Tại sao người nói nói, &quot;Và tôi luôn thích nghe từ bạn&quot;?
+(A) Để sắp xếp cho một diễn giả khách mời
+(B) Để yêu cầu trợ giúp kỹ thuật
+(C) Để cảm ơn khán giả vì sự quan tâm của họ
+(D) Để khuyến khích người nghe liên hệ với anh ấy</p></div></div><h3 id="5bbbb3f8-9b45-49b8-b3c9-6847607d781f" class="">86-88</h3><figure id="561f4f09-cc7e-4d66-9270-43d28496329b"><div class="source"><a href="Test%2004%20ba93d094bf3c4e528db33b5c35b3bba4/Part4-86-88.mp3">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/405e3688-9753-416f-adcb-28797cb065da/Part4-86-88.mp3</a></div></figure><div id="0664c18a-c68f-4076-bfcc-48c3190efe86" class="column-list"><div id="223c927e-b136-482e-9fb4-7ab92510ba34" style="width:50%" class="column"><p id="bd63f457-0e35-45a6-863f-f0a4bf48524f" class="">Good evening! <mark class="highlight-red">86</mark> <strong>I&#x27;m so glad you all could make it tonight to celebrate our company&#x27;s expansion. </strong><mark class="highlight-red">87</mark> <strong>When I first started this greeting card company,</strong> it was only a small team of three people struggling to make our business work. And now we have twenty full-time employees, we&#x27;ve expanded our distribution, and we even have a new, much larger office space. <mark class="highlight-red">88</mark> <strong>So please, before you leave the banquet, pick up your gift bag.</strong> It&#x27;s my personal token of appreciation to thank all of you for your contribution to our company&#x27;s success.</p><p id="63e47531-8700-4da6-96a5-d916ae887fd6" class="">
+</p></div><div id="59e01939-6b0c-47bd-9529-bd42c520a55a" style="width:50%" class="column"><p id="aa700c4c-6a3b-49c2-8ffb-33e8a4407e71" class="">Buổi tối vui vẻ! 86 Tôi rất vui vì tất cả các bạn có thể đến dự tối nay để chúc mừng sự mở rộng của công ty chúng ta. 87 Khi tôi mới thành lập công ty thiệp chúc mừng này, đó chỉ là một nhóm nhỏ gồm ba người đang nỗ lực để công việc kinh doanh của chúng tôi hoạt động. Và bây giờ chúng tôi có 20 nhân viên làm việc toàn thời gian, chúng tôi đã mở rộng hệ thống phân phối của mình và thậm chí chúng tôi còn có một không gian văn phòng mới lớn hơn nhiều. 88 Vậy xin vui lòng, trước khi rời khỏi bữa tiệc, hãy nhặt túi quà của bạn lên. Đó là sự đánh giá cao của cá nhân tôi để cảm ơn tất cả các bạn vì những đóng góp của bạn cho sự thành công của công ty chúng tôi.</p></div></div><div id="6ef36d7c-9b91-4ebf-8f3a-708e4a1f6de6" class="column-list"><div id="ed91ddf1-7e7b-43bc-989f-b87653b7242a" style="width:50%" class="column"><p id="c3928406-e800-4764-baf0-e880b950bb31" class="">86
+What is being celebrated?
+(A) The completion of some renovations
+(B) The retirement of a colleague
+(C) An award for community service
+<strong>(D) The growth of a company</strong></p></div><div id="f6b1fb1b-d3f5-475d-a6dc-e668f7fbbe2b" style="width:50%" class="column"><p id="a46df5fe-d9a8-420f-8003-2a889273eb2e" class="">86
+Những gì đang được tổ chức?
+(A) Việc hoàn thành một số cải tạo
+(B) Việc nghỉ hưu của một đồng nghiệp
+(C) Một giải thưởng cho dịch vụ cộng đồng
+(D) Sự phát triển của một công ty</p></div></div><p id="cea06f94-3860-4407-b997-1048580c1a20" class="">
+</p><div id="346d9668-d6fa-48c3-b165-5af3f980f822" class="column-list"><div id="f7c8c12c-15dd-4b3c-8de9-745580169a2f" style="width:50%" class="column"><p id="51c44b8c-2b08-4a72-b526-7142884d0e77" class="">87
+Who most likely is the speaker?
+(A) A lead architect
+<strong>(B) A business owner
+</strong>(C) A current client
+(D) A conference coordinator</p></div><div id="9d3f9c6f-e81f-493c-a6b4-50debec52a23" style="width:50%" class="column"><p id="7adc3c19-01e9-4f42-b9b3-91b0af09cdce" class="">87
+Ai có khả năng nhất là người nói?
+(A) Một kiến trúc sư trưởng
+(B) Một chủ doanh nghiệp
+(C) Một khách hàng hiện tại
+(D) Một điều phối viên hội nghị</p></div></div><p id="d768397a-4eae-4ffc-acdb-9c3c267357da" class="">
+</p><div id="a9c59a41-94dc-4013-bbb0-afaaf93ab4d8" class="column-list"><div id="5ced214b-5c4a-46e2-8bc7-ccd14f8ce905" style="width:50%" class="column"><p id="7014749d-0165-41aa-9145-e275f8f93d33" class="">88
+What are employees asked to do before they leave?
+(A) Meet a public official
+(B) Be in a group photograph
+(C) Make a donation
+<strong>(D) Collect a gift</strong></p></div><div id="56dbbc44-9ead-4d04-aebb-602982da0257" style="width:50%" class="column"><p id="2693a15c-fcf9-4cf2-bc1c-fecce0a1c00d" class="">88
+Nhân viên được yêu cầu làm gì trước khi nghỉ việc?
+(A) Gặp gỡ một quan chức nhà nước
+(B) Chụp ảnh nhóm
+(C) Quyên góp
+(D) Thu thập một món quà</p></div></div><h3 id="9e0cc196-9763-47a8-aa38-694e3074b5c1" class="">89-91</h3><p id="81588166-5f04-4fa9-bee9-a473d2f429b6" class="">
+</p><figure id="c812f259-e452-40e0-ab1d-456f28ebc684"><div class="source"><a href="Test%2004%20ba93d094bf3c4e528db33b5c35b3bba4/Part4-89-91.mp3">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/45b4989e-8abd-421c-82e9-030066b9a563/Part4-89-91.mp3</a></div></figure><div id="f64a8dac-6c5d-4c22-8728-69160f87eb06" class="column-list"><div id="5775b020-5611-48b4-90e8-855d63137af1" style="width:50%" class="column"><p id="cfbfc989-5e57-448a-8e89-eaca2f92d5a0" class="">Hi, Mariko, this is Francois Duchamp calling from Human Resources. <mark class="highlight-red">89</mark> <strong>We&#x27;re supposed to begin posting the laboratory assistant position this Friday.</strong> But, I don&#x27;t know, have you seen the interview questions we use? <mark class="highlight-red">90</mark> <strong>Since you supervise the laboratory employees, I&#x27;d really be interested in your opinion of them.</strong> <mark class="highlight-red">91</mark> <strong>It would be great if you have some time today to talk about this</strong>. I&#x27;m about to go to an early lunch, but I&#x27;ll be at my desk until five o&#x27;clock this afternoon. Thanks.</p></div><div id="696d8bea-be3f-46b9-9ba1-b636259e9df2" style="width:50%" class="column"><p id="9d407508-6014-4d7e-b456-cfeb3cc51fc4" class="">Xin chào, Mariko, đây là Francois Duchamp gọi từ bộ phận Nhân sự. 89 Chúng tôi phải bắt đầu đăng vị trí trợ lý phòng thí nghiệm vào thứ Sáu này. Nhưng, tôi không biết, bạn đã thấy những câu hỏi phỏng vấn mà chúng tôi sử dụng chưa? 90 Vì bạn giám sát các nhân viên phòng thí nghiệm, tôi thực sự muốn biết ý kiến của bạn về họ. 91 Sẽ thật tuyệt nếu hôm nay bạn có chút thời gian để nói về điều này. Tôi chuẩn bị đi ăn trưa sớm, nhưng tôi sẽ ở bàn làm việc cho đến 5 giờ chiều nay. Cảm ơn.</p></div></div><p id="924669d4-6456-4781-b9f2-b50a9e9b0f60" class="">
+</p><div id="b516fe76-2030-4183-8f6c-ac5505976d14" class="column-list"><div id="c9d0de7b-7eba-4d12-9d96-486a5ac25277" style="width:50%" class="column"><p id="366d6e4b-4909-4366-9647-9664695b47b1" class="">89
+What position is being advertised?
+(A) Program coordinator
+(B) Administrative assistant
+<strong>(C) Laboratory worker
+</strong>(D) Human Resources director</p></div><div id="862322f2-0c80-4df0-9b64-584d17a841a3" style="width:50%" class="column"><p id="56f2e591-022e-477e-9480-5d34e178d931" class="">89
+Vị trí nào đang được quảng cáo?
+(A) Điều phối viên chương trình
+(B) Trợ lý hành chính
+(C) Nhân viên phòng thí nghiệm
+(D) Giám đốc Nhân sự</p></div></div><div id="f08f2d25-5fff-4999-b328-07415828afab" class="column-list"><div id="d2da9312-86aa-4795-8854-1a3c06cff379" style="width:50%" class="column"><p id="d43d8aff-375e-4c0f-a9b9-66a8d8e8e66a" class="">90
+What does the man imply when he says, &quot;Have you seen the interview questions we use&quot;?
+(A) He is confirming an assignment.
+(B) He has misplaced some forms.
+<strong>(C) He is concerned about some questions.
+</strong>(D) He wants the woman to lead an interview.</p></div><div id="9b0eea69-615f-4632-a620-e53259051fc9" style="width:50%" class="column"><p id="567ce4b7-2cc1-41df-ad1c-04572eb7c297" class="">90
+Người đàn ông ngụ ý gì khi anh ta nói, &quot;Bạn đã xem những câu hỏi phỏng vấn mà chúng tôi sử dụng chưa&quot;?
+(A) Anh ấy đang xác nhận một nhiệm vụ.
+(B) Anh ấy đã đặt nhầm một số mẫu đơn.
+(C) Anh ấy quan tâm đến một số câu hỏi.
+(D) Anh ấy muốn người phụ nữ dẫn dắt một cuộc phỏng vấn.</p></div></div><div id="997de999-c069-4b53-84a0-c07f5fb4c4f4" class="column-list"><div id="93092b7c-feef-4002-8def-7084c70dc112" style="width:50%" class="column"><p id="8f033533-0fed-48be-87e3-8e2bd97a4927" class="">91
+Why does the man want to meet with the woman?
+(A) To introduce an applicant
+<strong>(B) To ask for her opinion
+</strong>(C) To offer her a promotion
+(D) To plan an orientation</p></div><div id="6d7503c7-3b03-4bed-bda7-2170d8b6c969" style="width:50%" class="column"><p id="1beb555f-44a6-4c0f-8434-205b781a5872" class="">91
+Tại sao người đàn ông muốn gặp người phụ nữ?
+(A) Để giới thiệu một ứng viên
+(B) Để hỏi ý kiến của cô ấy
+(C) Để thăng chức cho cô ấy
+(D) Để lập kế hoạch định hướng</p></div></div><h3 id="fbdefc46-a4f6-45b6-99ae-429d7e44ae28" class="">92-94</h3><figure id="dfd42dcb-af76-45bb-a79e-17bc4c07f318" class="image"><a href="Test%2004%20ba93d094bf3c4e528db33b5c35b3bba4/Untitled%207.png"><img style="width:367px" src="Test%2004%20ba93d094bf3c4e528db33b5c35b3bba4/Untitled%207.png"/></a></figure><figure id="691e3f66-94ac-43b3-b045-ec056830caea"><div class="source"><a href="Test%2004%20ba93d094bf3c4e528db33b5c35b3bba4/Part4-92-94.mp3">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/364ace55-e8ba-4493-8e18-af708ba5daf1/Part4-92-94.mp3</a></div></figure><div id="d35d86d0-b1a4-47ba-9fe6-9e52432b6a97" class="column-list"><div id="5498433c-49e0-407f-bc73-a170bbe0eff2" style="width:50%" class="column"><p id="6d02d379-7c7e-4d18-a51f-865eaeb6b9f0" class="">Hi, this is Laura Dunn. <mark class="highlight-red">92 </mark><strong>I&#x27;m calling about a catering order you just delivered for our corporate luncheon this afternoon.</strong> I just realized that one of the food trays we ordered wasn&#x27;t included- <mark class="highlight-red">93</mark> <strong>we&#x27;re missing the pasta. </strong>Now, between the sushi and the chicken dish, we&#x27;ll have enough food, but <mark class="highlight-red">94</mark> <strong>I wanted to make sure we get a refund on the pasta. </strong>Could you please process the refund to the same credit card I used to place the order? Thanks and have a nice day.</p><p id="23a988a0-cfe7-4a1b-ba67-e66247b84bfb" class="">
+</p></div><div id="9d9cb031-6902-4553-94e8-fe5d3205216a" style="width:50%" class="column"><p id="b2b30ffa-6a32-4696-95d2-ab06ab5ba4f0" class="">Xin chào, đây là Laura Dunn. 92 Tôi đang gọi về một đơn đặt hàng phục vụ mà bạn vừa giao cho bữa tiệc trưa của công ty chúng tôi chiều nay. Tôi mới nhận ra rằng một trong những khay thức ăn mà chúng tôi đã đặt không được bao gồm-93 chúng tôi đang thiếu mì ống. Bây giờ, giữa món sushi và món gà, chúng tôi sẽ có đủ thức ăn, nhưng 94 tôi muốn đảm bảo rằng chúng tôi sẽ được hoàn tiền cho món mì ống. Bạn có thể vui lòng xử lý khoản tiền hoàn lại vào cùng một thẻ tín dụng mà tôi đã sử dụng để đặt hàng không? Cảm ơn và có một ngày tốt đẹp.</p></div></div><div id="0404cbd8-0ab4-486b-8a4f-c6747f8306f8" class="column-list"><div id="00c52d7d-ffe2-465b-a944-f8bfdcedf051" style="width:50%" class="column"><p id="39b4e23d-c152-4bf2-8205-e818be19a2f2" class="">92
+What event does the woman mention?
+(A) A training session
+<strong>(B) A company lunch
+</strong>(C) A cooking contest
+(D) A grand opening</p></div><div id="99bd6afe-5d4e-4604-8091-93157d1388f0" style="width:50%" class="column"><p id="ed9714be-ca4d-4c8a-8974-8a12aa7d69e6" class="">92
+Người phụ nữ nhắc đến sự kiện gì?
+(A) Một buổi đào tạo
+(B) Bữa trưa của công ty
+(C) Một cuộc thi nấu ăn
+(D) Một buổi khai trương</p></div></div><div id="05ecb21c-afcd-405f-a24a-78596029f5c6" class="column-list"><div id="6b02e8ef-0bcc-4cd5-9769-e02b8f031ad0" style="width:50%" class="column"><p id="1271be1c-879d-43ec-a89b-b8abf7a81bdc" class="">93
+What is the problem?
+<strong>(A) An item is missing.
+</strong>(B) A delivery was late.
+(C) A discount was not applied.
+(D) A staff member is unavailable.</p></div><div id="8e4231e0-5fe4-417c-8f52-0a9949663e3e" style="width:50%" class="column"><p id="f4dced30-06a4-4808-8d87-133bb029e8d2" class="">93
+Vấn đề là gì?
+(A) Một món đồ bị thiếu.
+(B) Giao hàng bị trễ.
+(C) Giảm giá đã không được áp dụng.
+(D) Một nhân viên không có mặt.</p></div></div><div id="fac2bf62-47b6-4a03-a176-b6d1d3f572b0" class="column-list"><div id="0fd2186f-bd7d-4a74-9636-09b0d568cde1" style="width:50%" class="column"><p id="e67a9306-96e7-4915-b8c6-709ea589f6b3" class="">94
+Look at the graphic. How much money will the woman be refunded?
+(A) $160
+(B) $140
+<strong>(C) $135
+</strong>(D) $50</p></div><div id="9da4347d-1911-4242-885e-49f0f41811bf" style="width:50%" class="column"><p id="937c7f3b-24d7-45a8-ab8f-20f955ddcaf3" class="">94
+Nhìn vào đồ họa. Người phụ nữ sẽ được hoàn lại bao nhiêu tiền?
+(A) $160
+(B) $140
+(C) $135
+(D) $50</p></div></div><h3 id="df4a0cf2-307e-49d9-931f-9b182844c970" class="">95-97</h3><figure id="d098c060-aaf9-4e16-9c35-5cc1100cd43e" class="image"><a href="Test%2004%20ba93d094bf3c4e528db33b5c35b3bba4/Untitled%208.png"><img style="width:383px" src="Test%2004%20ba93d094bf3c4e528db33b5c35b3bba4/Untitled%208.png"/></a></figure><figure id="e5b6ff2c-aae4-4379-a71e-34da35ca3536"><div class="source"><a href="Test%2004%20ba93d094bf3c4e528db33b5c35b3bba4/Part4-95-97.mp3">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f1e1c92c-8fc1-411c-8a50-d2beeb5ee5b8/Part4-95-97.mp3</a></div></figure><div id="121b0c29-3c76-40bd-867c-f7a3cf85e686" class="column-list"><div id="3c304e29-afb4-457f-8c69-e1acdb283342" style="width:50%" class="column"><p id="6477256d-9658-4f43-a6ae-fcb9cd561880" class=""><mark class="highlight-red">95</mark><strong> Good morning and thanks for inviting me to this board meeting.</strong> <mark class="highlight-red">96</mark> <strong>You asked me to find ways for our company to become more environmentally friendly,</strong> so here&#x27;s what I came up with. Here are four options for desktop management software. After business hours, when most computers are not in use, these programs will automatically turn off our computers, saving costs and energy. All are compatible with the hardware we use, and the projected savings are comparable for all four software systems. <mark class="highlight-red">97</mark> <strong>However, only one has a system for backing up data in an emergency. So that&#x27;s the one I recommend.</strong></p></div><div id="c2bcc134-1ef4-48c8-979d-a44cf9f9db1d" style="width:50%" class="column"><p id="378b7828-0123-4031-8948-cd14be313b23" class="">95 Chào buổi sáng và cảm ơn vì đã mời tôi đến cuộc họp hội đồng quản trị này. 96 Bạn yêu cầu tôi tìm cách để công ty của chúng ta trở nên thân thiện với môi trường hơn, vì vậy đây là những gì tôi nghĩ ra. Dưới đây là bốn tùy chọn cho phần mềm quản lý máy tính để bàn. Sau giờ làm việc, khi hầu hết các máy tính không được sử dụng, các chương trình này sẽ tự động tắt máy tính của chúng tôi, tiết kiệm chi phí và năng lượng. Tất cả đều tương thích với phần cứng chúng tôi sử dụng và mức tiết kiệm dự kiến tương đương với cả bốn hệ thống phần mềm. 97 Tuy nhiên, chỉ có một đơn vị có hệ thống sao lưu dữ liệu trong trường hợp khẩn cấp. Vì vậy, đó là một trong những tôi đề nghị.</p></div></div><p id="259d89fc-d218-465d-aacd-4a00312468c1" class="">
+</p><div id="677f8783-e781-4aea-8f74-ab5083877198" class="column-list"><div id="2c6f9598-0fb2-4389-b4e7-e65ed5847d0e" style="width:50%" class="column"><p id="d9a2c3b6-78bc-496b-beb7-75413b33ee07" class="">95
+Where does the talk most likely take place?
+(A) At a press conference
+<strong>(B) At a company meeting
+</strong>(C) At a job-training session
+(D) At a technology conference</p></div><div id="0c768ab4-a75b-4c90-9ed6-80ce291276d1" style="width:50%" class="column"><p id="a6c299a2-f34e-4cd8-b6d1-808b58c6d104" class="">95
+Cuộc nói chuyện có nhiều khả năng diễn ra nhất ở đâu?
+(A) Tại một cuộc họp báo
+(B) Tại một cuộc họp công ty
+(C) Tại một buổi đào tạo nghề
+(D) Tại một hội nghị công nghệ</p></div></div><div id="2844c9e1-324b-4bb7-ac58-e85b1e6aa27c" class="column-list"><div id="94fb8052-a9ac-4dda-acd9-710a02a246a3" style="width:50%" class="column"><p id="83eeb0b1-fc2d-49fa-a320-51a860678e20" class="">96
+What does the company want to do?
+(A) Hire a consultant
+(B) Purchase new desktop computers
+<strong>(C) Become more environmentally friendly
+</strong>(D) Have employees work at night</p></div><div id="5817285f-fbe5-4427-a589-b7ea8f331d33" style="width:50%" class="column"><p id="c26d8fee-9299-442a-a6b8-74aa3fa04a52" class="">96
+Công ty muốn làm gì?
+(A) Thuê một nhà tư vấn
+(B) Mua máy tính để bàn mới
+(C) Trở nên thân thiện với môi trường hơn
+(D) Cho nhân viên làm việc vào ban đêm</p></div></div><div id="f725b0e7-b286-4bcb-86ed-b6e0efeefa7e" class="column-list"><div id="3123244c-9ca3-44ac-a086-c8c61cee8845" style="width:50%" class="column"><p id="0b1318ef-2cf1-4d42-b4d5-01962745fae5" class="">97
+Look at the graphic. Which option does the speaker recommend?
+<strong>(A) Option 1
+</strong>(B) Option 2
+(C) Option 3
+(D) Option 4</p></div><div id="cf6d234c-679b-4efb-ac04-7ea161eaae6e" style="width:50%" class="column"><p id="b485c41e-7167-4935-8962-9f01a878b5a5" class="">97
+Nhìn vào đồ họa. Lựa chọn nào người nói đề nghị?
+(A) Lựa chọn 1
+(B) Lựa chọn 2
+(C) Lựa chọn 3
+(D) Lựa chọn 4</p></div></div><h3 id="ab13bf37-f8dd-4d30-80ce-d62e263feddb" class="">98-100</h3><figure id="c0a0115d-e268-4730-b713-92e37223247f" class="image"><a href="Test%2004%20ba93d094bf3c4e528db33b5c35b3bba4/Untitled%209.png"><img style="width:385px" src="Test%2004%20ba93d094bf3c4e528db33b5c35b3bba4/Untitled%209.png"/></a></figure><figure id="0253a60f-3e05-4d1c-8e07-747ba4d58a2c"><div class="source"><a href="Test%2004%20ba93d094bf3c4e528db33b5c35b3bba4/Part4-98-100.mp3">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2cda5f18-0204-47c7-a4a4-4c870935f8c1/Part4-98-100.mp3</a></div></figure><div id="a2bf14e9-a31e-4d98-be3a-cc4b1d96bb1a" class="column-list"><div id="1dae545f-2340-44d5-9938-e68efad101f7" style="width:50%" class="column"><p id="dfae7831-7da4-4b0e-9299-d85983b38496" class="">Welcome to your first day at The Harling Company! <mark class="highlight-red">98</mark> <strong>Your role in handling customer inquiries over the phone will be crucial to our sales.</strong> Here&#x27;s your training calendar... So, today, we&#x27;ll get you set up and we&#x27;ll teach you the basics of the job. Then, for the rest of the week you&#x27;ll be trained one-on-one by your manager. You&#x27;ll practice answering the phones and receive feedback at the end of the week on your interaction with the customers. <mark class="highlight-red">99</mark> <strong>You&#x27;ll really enjoy working with your managers,</strong> you&#x27;ll see.... they&#x27;re great! Oh, and one more thing: the company president wants to meet all of you. <mark class="highlight-red">100</mark> <strong>So she organized a team lunch to welcome you all.</strong></p><p id="08e9ad5f-8fe0-4faf-a256-a68a6e4b763b" class="">
+</p></div><div id="669a7297-6e4e-43e3-923f-372f15e732da" style="width:50%" class="column"><p id="06b36cab-7614-49c2-8fd2-1afd51ae66b6" class="">Chào mừng đến với ngày đầu tiên của bạn tại The Harling Company! 98 Vai trò của bạn trong việc giải quyết thắc mắc của khách hàng qua điện thoại sẽ rất quan trọng đối với việc bán hàng của chúng tôi. Đây là lịch đào tạo của bạn... Vì vậy, hôm nay, chúng tôi sẽ giúp bạn thiết lập và hướng dẫn bạn những kiến thức cơ bản về công việc. Sau đó, trong phần còn lại của tuần, bạn sẽ được huấn luyện trực tiếp bởi người quản lý của mình. Bạn sẽ thực hành trả lời điện thoại và nhận phản hồi vào cuối tuần về sự tương tác của bạn với khách hàng. 99 Bạn sẽ thực sự thích làm việc với những người quản lý của mình, bạn sẽ thấy.... họ thật tuyệt! Ồ, và một điều nữa: chủ tịch công ty muốn gặp tất cả các bạn. 100 Vì vậy, cô ấy đã tổ chức một bữa trưa tập thể để chào đón tất cả các bạn.</p></div></div><div id="0f6aa7bb-17ee-446d-832b-9efba0447b2e" class="column-list"><div id="a158ad56-402b-426f-8d65-41a6225031df" style="width:50%" class="column"><p id="14ab7034-01b0-44b6-9952-8e4f82a524cc" class="">98
+What are listeners training to be?
+(A) Computer technicians.
+(B) Restaurant chefs
+(C) Assembly line workers
+<strong>(D) Customer service representatives</strong></p></div><div id="f797bf5c-b129-4b2f-9368-03717ecffa57" style="width:50%" class="column"><p id="0babc5c5-abb4-4db1-99be-01b0321e72ea" class="">98
+Người nghe được đào tạo để trở thành gì?
+(A) Kỹ thuật viên máy tính.
+(B) Đầu bếp nhà hàng
+(C) Công nhân dây chuyền lắp ráp
+(D) Đại diện dịch vụ khách hàng</p></div></div><div id="90775e1a-3195-448d-b356-0d93a0d1265c" class="column-list"><div id="bd97f970-02a1-4ca9-a326-effef4c8740b" style="width:50%" class="column"><p id="a30d17a2-1c80-4bf8-afde-d19bad064abe" class="">99
+According to the speaker, what will the listeners enjoy doing?
+<strong>(A) Working with managers
+</strong>(B) Touring the company
+(C) Meeting with customers
+(D) Using new equipment</p></div><div id="31fd94e2-3928-4aef-b44e-2fa7ba652bc3" style="width:50%" class="column"><p id="72175f71-655e-46f6-b1e7-815b57572284" class="">99
+Theo người nói, người nghe sẽ thích làm gì?
+(A) Làm việc với người quản lý
+(B) Tham quan công ty
+(C) Gặp gỡ khách hàng
+(D) Sử dụng thiết bị mới</p></div></div><div id="87b06563-4f38-4953-85cb-ec18590fbc90" class="column-list"><div id="d1d860e9-a181-4dbd-b1e6-3947dddaa94c" style="width:50%" class="column"><p id="a311693d-d90c-4a58-9a71-da02d113a11c" class="">100
+Look at the graphic. On what day will the listeners meet with the company president?
+(A) Tuesday
+<strong>(B) Wednesday
+</strong>(C) Thursday
+(D) Friday</p></div><div id="f8bb960d-cff4-41fb-8cd9-d2d842ac0a62" style="width:50%" class="column"><p id="d4ecfad3-8471-4527-af5b-c00e75ad0b52" class="">100
+Nhìn vào đồ họa. Thính giả sẽ gặp chủ tịch công ty vào ngày nào?
+(A) Thứ Ba
+(B) Thứ Tư
+(C) Thứ Năm
+(Đ) Thứ sáu</p></div></div><p id="2af936c4-d5de-449b-a431-fd175d5fa83c" class="">
+</p></div></article></body></html>
